@@ -44,8 +44,11 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(message)s",
     handlers=[
-        logging.FileHandler("telethon_scraper.log", 
-                          encoding='utf-8', mode='a'),
+        logging.FileHandler(
+            "telethon_scraper.log", 
+            encoding='utf-8', 
+            mode='a'
+        ),
         SingleLineProgressHandler()
     ]
 )
@@ -231,8 +234,11 @@ class TelegramScraper:
 
         # Create in-memory zip first
         mem_zip = BytesIO()
-        with zipfile.ZipFile(mem_zip, mode='w', 
-                            compression=zipfile.ZIP_DEFLATED) as zf:
+        with zipfile.ZipFile(
+            mem_zip, 
+            mode='w', 
+            compression=zipfile.ZIP_DEFLATED
+        ) as zf:
             for media_file in config.media_dir.glob(f"{safe_name}_*"):
                 if media_file.suffix.lower() in [
                     '.jpg', '.jpeg', '.png', '.gif', '.webp'
@@ -346,7 +352,9 @@ class TelegramScraper:
             json_path = base_path.with_suffix('.json')
             async with aiofiles.open(json_path, 'w', encoding='utf-8') as f:
                 await f.write(json.dumps(
-                    messages, ensure_ascii=False, indent=2
+                    messages, 
+                    ensure_ascii=False, 
+                    indent=2
                 ))
             logger.info(f"Saved {len(messages)} messages to {json_path}")
 
