@@ -44,7 +44,8 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(message)s",
     handlers=[
-        logging.FileHandler("telethon_scraper.log", encoding='utf-8', mode='a'),
+        logging.FileHandler("telethon_scraper.log", 
+                          encoding='utf-8', mode='a'),
         SingleLineProgressHandler()
     ]
 )
@@ -56,7 +57,9 @@ shutdown_event = asyncio.Event()
 
 
 def handle_signal(signum, frame):
-    logger.warning(f"Received signal {signum}, initiating graceful shutdown...")
+    logger.warning(
+        f"Received signal {signum}, initiating graceful shutdown..."
+    )
     shutdown_event.set()
 
 
@@ -143,8 +146,10 @@ config = Config()
 
 # Helper functions
 def generate_file_hash(content: Union[str, bytes]) -> str:
-    return hashlib.sha256(content.encode('utf-8') if isinstance(content, str) 
-                        else content).hexdigest()
+    return hashlib.sha256(
+        content.encode('utf-8') if isinstance(content, str) 
+        else content
+    ).hexdigest()
 
 
 def safe_encode(text: str) -> str:
@@ -182,8 +187,10 @@ class TelegramScraper:
 
             # Progress callback
             def progress_callback(current, total):
-                progress = (f"Downloading {filename}: {current/1024:.1f}KB/"
-                          f"{total/1024:.1f}KB ({current/total:.1%})")
+                progress = (
+                    f"Downloading {filename}: {current/1024:.1f}KB/"
+                    f"{total/1024:.1f}KB ({current/total:.1%})"
+                )
                 self.current_download = progress
                 logger.info(f"PROGRESS:{self.current_download}")
 
@@ -227,8 +234,9 @@ class TelegramScraper:
         with zipfile.ZipFile(mem_zip, mode='w', 
                             compression=zipfile.ZIP_DEFLATED) as zf:
             for media_file in config.media_dir.glob(f"{safe_name}_*"):
-                if media_file.suffix.lower() in ['.jpg', '.jpeg', '.png', 
-                                               '.gif', '.webp']:
+                if media_file.suffix.lower() in [
+                    '.jpg', '.jpeg', '.png', '.gif', '.webp'
+                ]:
                     zf.write(media_file, media_file.name)
                     logger.debug(f"Added {media_file.name} to ZIP")
 
@@ -275,28 +283,36 @@ class TelegramScraper:
                         'channel': channel_name,
                         'channel_title': getattr(entity, 'title', ''),
                         'message_id': message.id,
-                        'text': safe_encode(message.text) if message.text 
-                               else '[no text]',
+                        'text': safe_encode(message.text) 
+                               if message.text else '[no text]',
                         'date': format_timestamp(message.date),
                         'views': getattr(message, 'views', None),
                         'forwards': getattr(message, 'forwards', None),
-                        'replies': (getattr(message.replies, 'replies', None) 
-                                   if message.replies else None),
+                        'replies': (
+                            getattr(message.replies, 'replies', None) 
+                            if message.replies else None
+                        ),
                         'has_media': bool(message.media),
-                        'media_type': (media_info['media_type'] 
-                                      if media_info else None),
-                        'media_size': (media_info['media_size'] 
-                                      if media_info else None),
+                        'media_type': (
+                            media_info['media_type'] 
+                            if media_info else None
+                        ),
+                        'media_size': (
+                            media_info['media_size'] 
+                            if media_info else None
+                        ),
                         'message_hash': generate_file_hash(message.text or ""),
                     }
 
                     messages.append(message_data)
-                    self.all_messages.append(message_data)  # Add to combined
+                    self.all_messages.append(message_data)
                     message_count += 1
 
                     if message_count % 10 == 0:
-                        logger.debug(f"Collected {message_count} messages "
-                                   f"from {channel_name}")
+                        logger.debug(
+                            f"Collected {message_count} messages "
+                            f"from {channel_name}"
+                        )
 
                     await asyncio.sleep(config.rate_limit_delay)
 
@@ -304,8 +320,9 @@ class TelegramScraper:
                     logger.debug(f"Skipping message {message.id}: {str(e)}")
                     continue
 
-            logger.info(f"Finished scraping {channel_name}: "
-                       f"{len(messages)} messages")
+            logger.info(
+                f"Finished scraping {channel_name}: {len(messages)} messages"
+            )
             return messages
 
         except errors.ChannelPrivateError:
@@ -328,8 +345,9 @@ class TelegramScraper:
             # Save as JSON
             json_path = base_path.with_suffix('.json')
             async with aiofiles.open(json_path, 'w', encoding='utf-8') as f:
-                await f.write(json.dumps(messages, 
-                                       ensure_ascii=False, indent=2))
+                await f.write(json.dumps(
+                    messages, ensure_ascii=False, indent=2
+                ))
             logger.info(f"Saved {len(messages)} messages to {json_path}")
 
             # Save as Parquet
@@ -425,7 +443,9 @@ class TelegramScraperApp:
                     if session_str:  # Ensure we have a session string
                         with open('session.txt', 'w') as f:
                             f.write(session_str)
-                        logger.info("New session created and saved to session.txt")
+                        logger.info(
+                            "New session created and saved to session.txt"
+                        )
                     else:
                         logger.error("Failed to get session string after login")
 
@@ -514,7 +534,10 @@ async def main():
     finally:
         print("\nScraping completed. Check these locations:")
         print(f"- Individual channel files: {config.output_dir.resolve()}")
-        print(f"- Combined CSV: {(config.output_dir / 'all_messages_combined.csv').resolve()}")
+        print(
+            f"- Combined CSV: "
+            f"{(config.output_dir / 'all_messages_combined.csv').resolve()}"
+        )
         print(f"- Image files: {config.media_dir.resolve()}")
         print(f"- Log file: {Path('telethon_scraper.log').resolve()}")
         if app.new_session_created and app.client:
