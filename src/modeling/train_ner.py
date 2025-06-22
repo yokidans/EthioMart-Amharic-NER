@@ -5,20 +5,26 @@ import datasets
 import numpy as np
 from sklearn.metrics import classification_report
 
+
 def load_data():
-    dataset = datasets.load_dataset('json', 
-                                 data_files={
-                                     'train': 'data/labeled/train.jsonl',
-                                     'val': 'data/labeled/val.jsonl'
-                                 })
+    dataset = datasets.load_dataset(
+        'json',
+        data_files={
+            'train': 'data/labeled/train.jsonl',
+            'val': 'data/labeled/val.jsonl'
+        }
+    )
     return dataset
 
+
 def tokenize_and_align_labels(examples, tokenizer):
-    tokenized_inputs = tokenizer(examples["text"], 
-                                truncation=True, 
-                                padding='max_length',
-                                max_length=128,
-                                is_split_into_words=True)
+    tokenized_inputs = tokenizer(
+        examples["text"],
+        truncation=True,
+        padding='max_length',
+        max_length=128,
+        is_split_into_words=True
+    )
     
     labels = []
     for i, label in enumerate(examples["tags"]):
@@ -38,6 +44,7 @@ def tokenize_and_align_labels(examples, tokenizer):
     tokenized_inputs["labels"] = labels
     return tokenized_inputs
 
+
 def compute_metrics(p):
     predictions, labels = p
     predictions = np.argmax(predictions, axis=2)
@@ -53,6 +60,7 @@ def compute_metrics(p):
     
     return classification_report(true_labels, true_predictions, output_dict=True)
 
+
 def train():
     dataset = load_data()
     tokenizer = AutoTokenizer.from_pretrained("xlm-roberta-base")
@@ -62,10 +70,12 @@ def train():
         batched=True
     )
     
+    # Define label_list before using it
+    label_list = ["O", "B-PER", "I-PER", "B-ORG", "I-ORG", "B-LOC", "I-LOC"]  # Example labels
+    
     model = AutoModelForTokenClassification.from_pretrained(
         "xlm-roberta-base",
         num_labels=len(label_list)
-    )
     
     training_args = TrainingArguments(
         output_dir="models/fine_tuned",
@@ -87,6 +97,7 @@ def train():
     
     trainer.train()
     trainer.save_model("models/fine_tuned/ethiomart_ner")
+
 
 if __name__ == "__main__":
     train()
