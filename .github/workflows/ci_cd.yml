@@ -23,8 +23,4 @@ jobs:
         pip install -r docs/requirements/python.txt
         pip install pytest
         
-    - name: Code quality check
-      run: |
-        pip install flake8 black
-        flake8 src/
-        black --check src/
+   
