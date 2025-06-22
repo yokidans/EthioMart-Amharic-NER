@@ -4,6 +4,7 @@ from pathlib import Path
 import logging
 from typing import List, Tuple
 
+
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
@@ -15,6 +16,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+
 class CoNLLAnnotator:
     def __init__(self):
         self.input_dir = Path("data/processed")
@@ -24,7 +26,7 @@ class CoNLLAnnotator:
         # Entity tags per task requirements
         self.entity_tags = {
             "PRODUCT": ["B-PRODUCT", "I-PRODUCT"],
-            "PRICE": ["B-PRICE", "I-PRICE"], 
+            "PRICE": ["B-PRICE", "I-PRICE"],
             "LOC": ["B-LOC", "I-LOC"]
         }
 
@@ -44,7 +46,8 @@ class CoNLLAnnotator:
     def validate_annotation(self, tokens: List[str], labels: List[str]) -> bool:
         """Quality control for each annotation"""
         if len(tokens) != len(labels):
-            logger.error(f"Length mismatch: {len(tokens)} tokens vs {len(labels)} labels")
+            msg = f"Length mismatch: {len(tokens)} tokens vs {len(labels)} labels"
+            logger.error(msg)
             return False
         
         # Check I-tags follow B-tags
@@ -93,6 +96,7 @@ class CoNLLAnnotator:
             annotated.append((tokens, labels))
         
         self.save_conll(annotated)
+
 
 if __name__ == "__main__":
     annotator = CoNLLAnnotator()
