@@ -1,0 +1,875 @@
+2025-06-22 18:58:55,022 - __main__ - INFO - Loading training and validation data...
+2025-06-22 18:58:55,038 - __main__ - INFO - Loaded 0 training and 0 validation examples
+2025-06-22 18:59:00,029 - huggingface_hub.file_download - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-06-22 19:01:29,063 - huggingface_hub.file_download - WARNING - Error while downloading from https://huggingface.co/xlm-roberta-base/resolve/main/model.safetensors: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-06-22 19:01:54,309 - huggingface_hub.file_download - WARNING - Error while downloading from https://huggingface.co/xlm-roberta-base/resolve/main/model.safetensors: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-06-22 19:03:10,863 - huggingface_hub.file_download - WARNING - Error while downloading from https://huggingface.co/xlm-roberta-base/resolve/main/model.safetensors: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-06-22 19:05:11,463 - huggingface_hub.file_download - WARNING - Error while downloading from https://huggingface.co/xlm-roberta-base/resolve/main/model.safetensors: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-06-22 19:05:23,819 - __main__ - ERROR - Error during training: (MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /xlm-roberta-base/resolve/main/model.safetensors (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001DA443398B0>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 49b0dfc7-6fbf-4341-b0a6-99da9d9c3734)')
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 779, in _error_catcher
+    yield
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 904, in _raw_read
+    data = self._fp_read(amt, read1=read1) if not fp_closed else b""
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 887, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\http\client.py", line 463, in read
+    n = self.readinto(b)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\http\client.py", line 507, in readinto
+    n = self.fp.readinto(b)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\socket.py", line 704, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1242, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1100, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 1091, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 980, in read
+    data = self._raw_read(amt)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 933, in _raw_read
+    self._fp.close()
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 784, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.") from e  # type: ignore[arg-type]
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 494, in http_get
+    for chunk in r.iter_content(chunk_size=constants.DOWNLOAD_CHUNK_SIZE):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\models.py", line 826, in generate
+    raise ConnectionError(e)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 779, in _error_catcher
+    yield
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 904, in _raw_read
+    data = self._fp_read(amt, read1=read1) if not fp_closed else b""
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 887, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\http\client.py", line 463, in read
+    n = self.readinto(b)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\http\client.py", line 507, in readinto
+    n = self.fp.readinto(b)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\socket.py", line 704, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1242, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1100, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 1091, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 980, in read
+    data = self._raw_read(amt)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 933, in _raw_read
+    self._fp.close()
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 784, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.") from e  # type: ignore[arg-type]
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 494, in http_get
+    for chunk in r.iter_content(chunk_size=constants.DOWNLOAD_CHUNK_SIZE):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\models.py", line 826, in generate
+    raise ConnectionError(e)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 779, in _error_catcher
+    yield
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 904, in _raw_read
+    data = self._fp_read(amt, read1=read1) if not fp_closed else b""
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 887, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\http\client.py", line 463, in read
+    n = self.readinto(b)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\http\client.py", line 507, in readinto
+    n = self.fp.readinto(b)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\socket.py", line 704, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1242, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1100, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 1091, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 980, in read
+    data = self._raw_read(amt)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 933, in _raw_read
+    self._fp.close()
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 784, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.") from e  # type: ignore[arg-type]
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 494, in http_get
+    for chunk in r.iter_content(chunk_size=constants.DOWNLOAD_CHUNK_SIZE):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\models.py", line 826, in generate
+    raise ConnectionError(e)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 779, in _error_catcher
+    yield
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 904, in _raw_read
+    data = self._fp_read(amt, read1=read1) if not fp_closed else b""
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 887, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\http\client.py", line 463, in read
+    n = self.readinto(b)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\http\client.py", line 507, in readinto
+    n = self.fp.readinto(b)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\socket.py", line 704, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1242, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1100, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 1091, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 980, in read
+    data = self._raw_read(amt)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 933, in _raw_read
+    self._fp.close()
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 784, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.") from e  # type: ignore[arg-type]
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 494, in http_get
+    for chunk in r.iter_content(chunk_size=constants.DOWNLOAD_CHUNK_SIZE):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\models.py", line 826, in generate
+    raise ConnectionError(e)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\socket.py", line 954, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x000001DA443398B0>: Failed to resolve 'huggingface.co' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /xlm-roberta-base/resolve/main/model.safetensors (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001DA443398B0>: Failed to resolve 'huggingface.co' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 172, in train
+    model = AutoModelForTokenClassification.from_pretrained(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\models\auto\auto_factory.py", line 571, in from_pretrained
+    return model_class.from_pretrained(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\modeling_utils.py", line 309, in _wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\modeling_utils.py", line 4422, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\modeling_utils.py", line 1024, in _get_resolved_checkpoint_files
+    resolved_archive_file = cached_file(pretrained_model_name_or_path, filename, **cached_file_kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\utils\hub.py", line 312, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\utils\hub.py", line 557, in cached_files
+    raise e
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\utils\hub.py", line 470, in cached_files
+    hf_hub_download(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\utils\_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 1008, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 1161, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 1725, in _download_to_tmp_and_move
+    http_get(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 511, in http_get
+    return http_get(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 511, in http_get
+    return http_get(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 511, in http_get
+    return http_get(
+  [Previous line repeated 1 more time]
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 420, in http_get
+    r = _request_wrapper(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 309, in _request_wrapper
+    response = http_backoff(method=method, url=url, **params, retry_on_exceptions=(), retry_on_status_codes=(429,))
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\utils\_http.py", line 310, in http_backoff
+    response = session.request(method=method, url=url, **kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\utils\_http.py", line 96, in send
+    return super().send(request, *args, **kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: (MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /xlm-roberta-base/resolve/main/model.safetensors (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001DA443398B0>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 49b0dfc7-6fbf-4341-b0a6-99da9d9c3734)')
+2025-06-22 19:05:54,163 - __main__ - INFO - Loading training and validation data...
+2025-06-22 19:05:54,163 - __main__ - INFO - Loaded 0 training and 0 validation examples
+2025-06-22 19:05:58,451 - huggingface_hub.file_download - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-06-22 19:08:10,671 - huggingface_hub.file_download - WARNING - Error while downloading from https://huggingface.co/xlm-roberta-base/resolve/main/model.safetensors: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-06-22 19:08:22,978 - __main__ - ERROR - Error during training: (MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /xlm-roberta-base/resolve/main/model.safetensors (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000022EC1F0D0A0>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: f7bb17f8-153d-4e22-8b1a-07032564b127)')
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 779, in _error_catcher
+    yield
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 904, in _raw_read
+    data = self._fp_read(amt, read1=read1) if not fp_closed else b""
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 887, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\http\client.py", line 463, in read
+    n = self.readinto(b)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\http\client.py", line 507, in readinto
+    n = self.fp.readinto(b)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\socket.py", line 704, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1242, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1100, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 1091, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 980, in read
+    data = self._raw_read(amt)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 933, in _raw_read
+    self._fp.close()
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 784, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.") from e  # type: ignore[arg-type]
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 494, in http_get
+    for chunk in r.iter_content(chunk_size=constants.DOWNLOAD_CHUNK_SIZE):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\models.py", line 826, in generate
+    raise ConnectionError(e)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\socket.py", line 954, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x0000022EC1F0D0A0>: Failed to resolve 'huggingface.co' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /xlm-roberta-base/resolve/main/model.safetensors (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000022EC1F0D0A0>: Failed to resolve 'huggingface.co' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 172, in train
+    model = AutoModelForTokenClassification.from_pretrained(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\models\auto\auto_factory.py", line 571, in from_pretrained
+    return model_class.from_pretrained(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\modeling_utils.py", line 309, in _wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\modeling_utils.py", line 4422, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\modeling_utils.py", line 1024, in _get_resolved_checkpoint_files
+    resolved_archive_file = cached_file(pretrained_model_name_or_path, filename, **cached_file_kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\utils\hub.py", line 312, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\utils\hub.py", line 557, in cached_files
+    raise e
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\utils\hub.py", line 470, in cached_files
+    hf_hub_download(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\utils\_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 1008, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 1161, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 1725, in _download_to_tmp_and_move
+    http_get(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 511, in http_get
+    return http_get(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 420, in http_get
+    r = _request_wrapper(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 309, in _request_wrapper
+    response = http_backoff(method=method, url=url, **params, retry_on_exceptions=(), retry_on_status_codes=(429,))
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\utils\_http.py", line 310, in http_backoff
+    response = session.request(method=method, url=url, **kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\utils\_http.py", line 96, in send
+    return super().send(request, *args, **kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: (MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /xlm-roberta-base/resolve/main/model.safetensors (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000022EC1F0D0A0>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: f7bb17f8-153d-4e22-8b1a-07032564b127)')
+2025-06-22 19:09:49,232 - __main__ - INFO - Loading training and validation data...
+2025-06-22 19:09:49,232 - __main__ - INFO - Loaded 0 training and 0 validation examples
+2025-06-22 19:09:53,157 - huggingface_hub.file_download - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-06-22 19:10:19,117 - huggingface_hub.file_download - WARNING - Error while downloading from https://huggingface.co/xlm-roberta-base/resolve/main/model.safetensors: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-06-22 19:11:38,634 - huggingface_hub.file_download - WARNING - Error while downloading from https://huggingface.co/xlm-roberta-base/resolve/main/model.safetensors: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-06-22 19:11:39,659 - __main__ - ERROR - Error during training: (MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /xlm-roberta-base/resolve/main/model.safetensors (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002019670D550>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: bc2a069f-0665-4003-9831-311c49c7efd8)')
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 779, in _error_catcher
+    yield
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 904, in _raw_read
+    data = self._fp_read(amt, read1=read1) if not fp_closed else b""
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 887, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\http\client.py", line 463, in read
+    n = self.readinto(b)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\http\client.py", line 507, in readinto
+    n = self.fp.readinto(b)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\socket.py", line 704, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1242, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1100, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 1091, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 980, in read
+    data = self._raw_read(amt)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 933, in _raw_read
+    self._fp.close()
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 784, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.") from e  # type: ignore[arg-type]
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 494, in http_get
+    for chunk in r.iter_content(chunk_size=constants.DOWNLOAD_CHUNK_SIZE):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\models.py", line 826, in generate
+    raise ConnectionError(e)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 779, in _error_catcher
+    yield
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 904, in _raw_read
+    data = self._fp_read(amt, read1=read1) if not fp_closed else b""
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 887, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\http\client.py", line 463, in read
+    n = self.readinto(b)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\http\client.py", line 507, in readinto
+    n = self.fp.readinto(b)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\socket.py", line 704, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1242, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1100, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 1091, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 980, in read
+    data = self._raw_read(amt)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 933, in _raw_read
+    self._fp.close()
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 784, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.") from e  # type: ignore[arg-type]
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 494, in http_get
+    for chunk in r.iter_content(chunk_size=constants.DOWNLOAD_CHUNK_SIZE):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\models.py", line 826, in generate
+    raise ConnectionError(e)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\socket.py", line 954, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x000002019670D550>: Failed to resolve 'huggingface.co' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /xlm-roberta-base/resolve/main/model.safetensors (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002019670D550>: Failed to resolve 'huggingface.co' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 172, in train
+    model = AutoModelForTokenClassification.from_pretrained(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\models\auto\auto_factory.py", line 571, in from_pretrained
+    return model_class.from_pretrained(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\modeling_utils.py", line 309, in _wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\modeling_utils.py", line 4422, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\modeling_utils.py", line 1024, in _get_resolved_checkpoint_files
+    resolved_archive_file = cached_file(pretrained_model_name_or_path, filename, **cached_file_kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\utils\hub.py", line 312, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\utils\hub.py", line 557, in cached_files
+    raise e
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\utils\hub.py", line 470, in cached_files
+    hf_hub_download(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\utils\_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 1008, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 1161, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 1725, in _download_to_tmp_and_move
+    http_get(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 511, in http_get
+    return http_get(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 511, in http_get
+    return http_get(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 420, in http_get
+    r = _request_wrapper(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 309, in _request_wrapper
+    response = http_backoff(method=method, url=url, **params, retry_on_exceptions=(), retry_on_status_codes=(429,))
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\utils\_http.py", line 310, in http_backoff
+    response = session.request(method=method, url=url, **kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\utils\_http.py", line 96, in send
+    return super().send(request, *args, **kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: (MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /xlm-roberta-base/resolve/main/model.safetensors (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000002019670D550>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: bc2a069f-0665-4003-9831-311c49c7efd8)')
+2025-06-22 19:15:08,054 - __main__ - INFO - Loading training and validation data...
+2025-06-22 19:15:08,057 - __main__ - INFO - Loaded 0 training and 0 validation examples
+2025-06-22 19:15:12,438 - huggingface_hub.file_download - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-06-22 19:21:59,871 - huggingface_hub.file_download - WARNING - Error while downloading from https://huggingface.co/xlm-roberta-base/resolve/main/model.safetensors: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-06-22 19:22:12,183 - __main__ - ERROR - Error during training: (MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /xlm-roberta-base/resolve/main/model.safetensors (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000162AE8EC040>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: a217b248-cde7-4e47-914e-84bb78a32de2)')
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 779, in _error_catcher
+    yield
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 904, in _raw_read
+    data = self._fp_read(amt, read1=read1) if not fp_closed else b""
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 887, in _fp_read
+    return self._fp.read(amt) if amt is not None else self._fp.read()
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\http\client.py", line 463, in read
+    n = self.readinto(b)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\http\client.py", line 507, in readinto
+    n = self.fp.readinto(b)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\socket.py", line 704, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1242, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1100, in read
+    return self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\models.py", line 820, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 1091, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 980, in read
+    data = self._raw_read(amt)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 933, in _raw_read
+    self._fp.close()
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\response.py", line 784, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.") from e  # type: ignore[arg-type]
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 494, in http_get
+    for chunk in r.iter_content(chunk_size=constants.DOWNLOAD_CHUNK_SIZE):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\models.py", line 826, in generate
+    raise ConnectionError(e)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\socket.py", line 954, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x00000162AE8EC040>: Failed to resolve 'huggingface.co' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /xlm-roberta-base/resolve/main/model.safetensors (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000162AE8EC040>: Failed to resolve 'huggingface.co' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 172, in train
+    model = AutoModelForTokenClassification.from_pretrained(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\models\auto\auto_factory.py", line 571, in from_pretrained
+    return model_class.from_pretrained(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\modeling_utils.py", line 309, in _wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\modeling_utils.py", line 4422, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\modeling_utils.py", line 1024, in _get_resolved_checkpoint_files
+    resolved_archive_file = cached_file(pretrained_model_name_or_path, filename, **cached_file_kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\utils\hub.py", line 312, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\utils\hub.py", line 557, in cached_files
+    raise e
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\utils\hub.py", line 470, in cached_files
+    hf_hub_download(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\utils\_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 1008, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 1161, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 1725, in _download_to_tmp_and_move
+    http_get(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 511, in http_get
+    return http_get(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 420, in http_get
+    r = _request_wrapper(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\file_download.py", line 309, in _request_wrapper
+    response = http_backoff(method=method, url=url, **params, retry_on_exceptions=(), retry_on_status_codes=(429,))
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\utils\_http.py", line 310, in http_backoff
+    response = session.request(method=method, url=url, **kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\utils\_http.py", line 96, in send
+    return super().send(request, *args, **kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: (MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /xlm-roberta-base/resolve/main/model.safetensors (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000162AE8EC040>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: a217b248-cde7-4e47-914e-84bb78a32de2)')
+2025-06-22 19:22:28,005 - __main__ - INFO - Loading training and validation data...
+2025-06-22 19:22:28,021 - __main__ - INFO - Loaded 0 training and 0 validation examples
+2025-06-22 19:22:28,036 - __main__ - ERROR - Error during training: (MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /api/models/xlm-roberta-base/tree/main/additional_chat_templates?recursive=False&expand=False (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000135746ECD60>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 191faadb-09b7-4437-b809-fa7e1792d38e)')
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\socket.py", line 954, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x00000135746ECD60>: Failed to resolve 'huggingface.co' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /api/models/xlm-roberta-base/tree/main/additional_chat_templates?recursive=False&expand=False (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000135746ECD60>: Failed to resolve 'huggingface.co' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 163, in train
+    tokenizer = AutoTokenizer.from_pretrained("xlm-roberta-base")
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 1032, in from_pretrained
+    return tokenizer_class_fast.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\tokenization_utils_base.py", line 1968, in from_pretrained
+    for template in list_repo_templates(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\utils\hub.py", line 161, in list_repo_templates
+    return [
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\utils\hub.py", line 161, in <listcomp>
+    return [
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\hf_api.py", line 3168, in list_repo_tree
+    for path_info in paginate(path=tree_url, headers=headers, params={"recursive": recursive, "expand": expand}):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\utils\_pagination.py", line 36, in paginate
+    r = session.get(path, params=params, headers=headers)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\huggingface_hub\utils\_http.py", line 96, in send
+    return super().send(request, *args, **kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: (MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /api/models/xlm-roberta-base/tree/main/additional_chat_templates?recursive=False&expand=False (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000135746ECD60>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 191faadb-09b7-4437-b809-fa7e1792d38e)')
+2025-06-22 19:22:43,986 - __main__ - INFO - Loading training and validation data...
+2025-06-22 19:22:43,986 - __main__ - INFO - Loaded 0 training and 0 validation examples
+2025-06-22 19:23:05,400 - huggingface_hub.file_download - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-06-22 19:25:45,025 - __main__ - ERROR - Error during training: __init__() got an unexpected keyword argument 'evaluation_strategy'
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 180, in train
+    training_args = TrainingArguments(
+TypeError: __init__() got an unexpected keyword argument 'evaluation_strategy'
+2025-06-22 19:30:33,425 - __main__ - INFO - Loading training and validation data...
+2025-06-22 19:30:33,457 - __main__ - INFO - Loaded 0 training and 0 validation examples
+2025-06-22 19:30:38,846 - __main__ - ERROR - Error during training: __init__() got an unexpected keyword argument 'evaluation_strategy'
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 180, in train
+    training_args = TrainingArguments(
+TypeError: __init__() got an unexpected keyword argument 'evaluation_strategy'
+2025-06-22 19:31:00,360 - __main__ - INFO - Loading training and validation data...
+2025-06-22 19:31:00,360 - __main__ - INFO - Loaded 0 training and 0 validation examples
+2025-06-22 19:31:04,163 - __main__ - ERROR - Error during training: __init__() got an unexpected keyword argument 'evaluation_strategy'
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 180, in train
+    training_args = TrainingArguments(
+TypeError: __init__() got an unexpected keyword argument 'evaluation_strategy'
+2025-06-22 19:32:20,419 - __main__ - INFO - Loading training and validation data...
+2025-06-22 19:32:20,419 - __main__ - INFO - Loaded 0 training and 0 validation examples
+2025-06-22 19:32:24,486 - __main__ - ERROR - Error during training: __init__() got an unexpected keyword argument 'evaluation_strategy'
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 180, in train
+    training_args = TrainingArguments(
+TypeError: __init__() got an unexpected keyword argument 'evaluation_strategy'
+2025-06-22 19:35:53,523 - __main__ - INFO - Loading training and validation data...
+2025-06-22 19:35:53,523 - __main__ - INFO - Loaded 0 training and 0 validation examples
+2025-06-22 19:35:53,523 - __main__ - ERROR - Error during training: No training or validation data found
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 161, in train
+    raise ValueError("No training or validation data found")
+ValueError: No training or validation data found
+2025-06-22 19:48:00,441 - __main__ - INFO - Loading training and validation data...
+2025-06-22 19:48:00,556 - __main__ - INFO - Loaded 2532 training and 634 validation examples
+2025-06-22 19:48:07,653 - __main__ - ERROR - Error during training: Using the `Trainer` with `PyTorch` requires `accelerate>=0.26.0`: Please run `pip install transformers[torch]` or `pip install 'accelerate>=0.26.0'`
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 184, in train
+    training_args = TrainingArguments(
+  File "<string>", line 131, in __init__
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\training_args.py", line 1738, in __post_init__
+    self.device
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\training_args.py", line 2268, in device
+    return self._setup_devices
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\utils\generic.py", line 67, in __get__
+    cached = self.fget(obj)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\training_args.py", line 2138, in _setup_devices
+    raise ImportError(
+ImportError: Using the `Trainer` with `PyTorch` requires `accelerate>=0.26.0`: Please run `pip install transformers[torch]` or `pip install 'accelerate>=0.26.0'`
+2025-06-22 19:49:59,054 - __main__ - INFO - Loading training and validation data...
+2025-06-22 19:49:59,144 - __main__ - INFO - Loaded 2532 training and 634 validation examples
+2025-06-22 19:50:06,018 - __main__ - INFO - Starting training...
+2025-06-22 20:04:00,382 - __main__ - INFO - Loading training and validation data...
+2025-06-22 20:04:00,602 - __main__ - INFO - Loaded 2532 training and 634 validation examples
+2025-06-22 20:04:01,075 - __main__ - ERROR - Error during training: name 'AutoTokenizer' is not defined
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 169, in train
+    tokenizer = AutoTokenizer.from_pretrained("xlm-roberta-base")
+NameError: name 'AutoTokenizer' is not defined
+2025-06-22 20:05:48,714 - __main__ - INFO - Loading training and validation data...
+2025-06-22 20:05:48,918 - __main__ - INFO - Loaded 2532 training and 634 validation examples
+2025-06-22 20:05:57,226 - __main__ - INFO - Starting training...
+2025-06-22 20:08:25,059 - __main__ - ERROR - Error loading messages: [Errno 2] No such file or directory: 'data\\processed\\cleaned_messages.csv'
+2025-06-22 20:35:07,020 - __main__ - INFO - Annotating 50 messages...
+2025-06-22 20:35:07,036 - __main__ - INFO - Saved 50 annotated messages to data\labeled\amharic_ner.conll

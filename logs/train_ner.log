@@ -1,0 +1,18 @@
+2025-06-22 18:08:25,371 - __main__ - INFO - Loading training and validation data...
+2025-06-22 18:08:25,393 - __main__ - INFO - Loaded 0 training and 0 validation examples
+2025-06-22 18:08:39,047 - __main__ - ERROR - Error during training: 
+AutoModelForTokenClassification requires the PyTorch library but it was not found in your environment. Checkout the instructions on the
+installation page: https://pytorch.org/get-started/locally/ and follow the ones that match your environment.
+Please note that you may need to restart your runtime after installation.
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 170, in train
+    model = AutoModelForTokenClassification.from_pretrained(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\utils\import_utils.py", line 1885, in __getattribute__
+    requires_backends(cls, cls._backends)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\utils\import_utils.py", line 1871, in requires_backends
+    raise ImportError("".join(failed))
+ImportError: 
+AutoModelForTokenClassification requires the PyTorch library but it was not found in your environment. Checkout the instructions on the
+installation page: https://pytorch.org/get-started/locally/ and follow the ones that match your environment.
+Please note that you may need to restart your runtime after installation.
+
