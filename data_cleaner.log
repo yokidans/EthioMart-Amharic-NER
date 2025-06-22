@@ -1,0 +1,303 @@
+2025-06-22 12:39:05,820 - __main__ - INFO - Loading combined data from data\raw\all_messages_combined.csv
+2025-06-22 12:39:05,852 - __main__ - INFO - Processing message data...
+2025-06-22 12:39:06,055 - __main__ - INFO - Saved cleaned messages to data\processed\cleaned_messages.parquet
+2025-06-22 12:39:06,055 - __main__ - ERROR - Error in cleaning pipeline: Object of type int64 is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\preprocessing\data_cleaner.py", line 210, in run_clean_pipeline
+    self.save_metadata(cleaned_df)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\preprocessing\data_cleaner.py", line 194, in save_metadata
+    json.dump(metadata, f, indent=2)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type int64 is not JSON serializable
+2025-06-22 12:39:06,055 - __main__ - ERROR - Fatal error in data cleaner: Object of type int64 is not JSON serializable
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\preprocessing\data_cleaner.py", line 225, in <module>
+    cleaner.run_clean_pipeline()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\preprocessing\data_cleaner.py", line 210, in run_clean_pipeline
+    self.save_metadata(cleaned_df)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\preprocessing\data_cleaner.py", line 194, in save_metadata
+    json.dump(metadata, f, indent=2)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "C:\Users\tefer\AppData\Local\Programs\Python\Python39\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type int64 is not JSON serializable
+2025-06-22 12:51:45,897 - __main__ - INFO - Loading combined data from data\raw\all_messages_combined.csv
+2025-06-22 12:51:45,944 - __main__ - INFO - Processing message data...
+2025-06-22 12:51:46,163 - __main__ - INFO - Saved cleaned messages to data\processed\cleaned_messages.parquet
+2025-06-22 12:51:46,163 - __main__ - INFO - Saved processing metadata to data\processed\processing_metadata.json
+2025-06-22 12:51:46,163 - __main__ - INFO - Processing images from media directory...
+2025-06-22 12:51:46,319 - __main__ - ERROR - Error processing nevacomputer_8673_1725941642.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:46,350 - __main__ - ERROR - Error processing nevacomputer_8674_1725941642.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:46,397 - __main__ - ERROR - Error processing nevacomputer_8675_1725941861.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:46,428 - __main__ - ERROR - Error processing nevacomputer_8676_1725941862.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:46,460 - __main__ - ERROR - Error processing nevacomputer_8677_1725941862.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:46,491 - __main__ - ERROR - Error processing nevacomputer_8678_1725941862.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:46,522 - __main__ - ERROR - Error processing nevacomputer_8679_1725941862.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:46,569 - __main__ - ERROR - Error processing nevacomputer_8680_1725941862.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:46,600 - __main__ - ERROR - Error processing nevacomputer_8682_1727245870.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:46,631 - __main__ - ERROR - Error processing nevacomputer_8683_1727245870.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:46,663 - __main__ - ERROR - Error processing nevacomputer_8684_1727245870.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:46,710 - __main__ - ERROR - Error processing nevacomputer_8685_1727245870.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:46,741 - __main__ - ERROR - Error processing nevacomputer_8686_1727245870.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:46,772 - __main__ - ERROR - Error processing nevacomputer_8687_1727245870.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:46,819 - __main__ - ERROR - Error processing nevacomputer_8688_1727247647.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:46,850 - __main__ - ERROR - Error processing nevacomputer_8689_1727247647.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:46,881 - __main__ - ERROR - Error processing nevacomputer_8690_1727248555.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:46,928 - __main__ - ERROR - Error processing nevacomputer_8691_1727248555.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:46,960 - __main__ - ERROR - Error processing nevacomputer_8692_1728414472.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:47,006 - __main__ - ERROR - Error processing nevacomputer_8693_1728414472.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:47,038 - __main__ - ERROR - Error processing nevacomputer_8694_1728414472.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:47,069 - __main__ - ERROR - Error processing nevacomputer_8695_1728414472.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:47,100 - __main__ - ERROR - Error processing nevacomputer_8696_1728414472.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:47,147 - __main__ - ERROR - Error processing nevacomputer_8697_1729344703.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:47,194 - __main__ - ERROR - Error processing nevacomputer_8698_1733552903.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:47,241 - __main__ - ERROR - Error processing nevacomputer_8699_1733552903.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:47,272 - __main__ - ERROR - Error processing nevacomputer_8700_1733552903.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:47,303 - __main__ - ERROR - Error processing nevacomputer_8701_1733552903.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:47,350 - __main__ - ERROR - Error processing nevacomputer_8702_1733552903.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:47,397 - __main__ - ERROR - Error processing nevacomputer_8703_1733553071.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:47,428 - __main__ - ERROR - Error processing nevacomputer_8704_1733553072.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:47,460 - __main__ - ERROR - Error processing nevacomputer_8705_1733553072.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:47,507 - __main__ - ERROR - Error processing nevacomputer_8706_1733553072.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:47,554 - __main__ - ERROR - Error processing nevacomputer_8707_1733553196.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:47,601 - __main__ - ERROR - Error processing nevacomputer_8708_1733553196.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:47,632 - __main__ - ERROR - Error processing nevacomputer_8709_1733553196.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:47,679 - __main__ - ERROR - Error processing nevacomputer_8710_1733554347.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:47,726 - __main__ - ERROR - Error processing nevacomputer_8711_1733554347.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:47,757 - __main__ - ERROR - Error processing nevacomputer_8712_1733554347.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:47,804 - __main__ - ERROR - Error processing nevacomputer_8713_1733554513.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:47,851 - __main__ - ERROR - Error processing nevacomputer_8714_1733554513.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:47,897 - __main__ - ERROR - Error processing nevacomputer_8715_1733554536.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:47,929 - __main__ - ERROR - Error processing nevacomputer_8716_1733554536.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:47,976 - __main__ - ERROR - Error processing nevacomputer_8717_1733554536.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:48,022 - __main__ - ERROR - Error processing nevacomputer_8718_1733554536.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:48,069 - __main__ - ERROR - Error processing nevacomputer_8720_1742471970.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:48,101 - __main__ - ERROR - Error processing nevacomputer_8721_1742471970.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:48,147 - __main__ - ERROR - Error processing nevacomputer_8724_1742474111.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:48,179 - __main__ - ERROR - Error processing nevacomputer_8725_1742474111.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:48,210 - __main__ - ERROR - Error processing nevacomputer_8726_1742474178.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:48,241 - __main__ - ERROR - Error processing nevacomputer_8727_1742474178.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:48,272 - __main__ - ERROR - Error processing nevacomputer_8728_1742474401.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:48,319 - __main__ - ERROR - Error processing nevacomputer_8729_1742474401.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:48,351 - __main__ - ERROR - Error processing nevacomputer_8730_1742474616.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:48,397 - __main__ - ERROR - Error processing nevacomputer_8731_1742474617.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:48,444 - __main__ - ERROR - Error processing nevacomputer_8732_1742474617.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:48,491 - __main__ - ERROR - Error processing nevacomputer_8733_1742474617.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:48,507 - __main__ - ERROR - Error processing nevacomputer_8734_1743315602.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:48,554 - __main__ - ERROR - Error processing nevacomputer_8735_1744443738.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:48,585 - __main__ - ERROR - Error processing nevacomputer_8736_1744443738.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:48,632 - __main__ - ERROR - Error processing nevacomputer_8737_1744443964.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:48,679 - __main__ - ERROR - Error processing nevacomputer_8738_1744443964.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:48,726 - __main__ - ERROR - Error processing nevacomputer_8739_1744443964.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:48,772 - __main__ - ERROR - Error processing nevacomputer_8740_1744444093.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:48,804 - __main__ - ERROR - Error processing nevacomputer_8741_1744444093.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:48,851 - __main__ - ERROR - Error processing nevacomputer_8742_1744444093.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:48,897 - __main__ - ERROR - Error processing nevacomputer_8743_1744444093.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:48,944 - __main__ - ERROR - Error processing nevacomputer_8744_1744444093.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:48,991 - __main__ - ERROR - Error processing nevacomputer_8745_1744444356.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:49,022 - __main__ - ERROR - Error processing nevacomputer_8746_1744444356.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:49,069 - __main__ - ERROR - Error processing nevacomputer_8747_1744444356.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:49,116 - __main__ - ERROR - Error processing nevacomputer_8748_1744444356.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:49,147 - __main__ - ERROR - Error processing nevacomputer_8749_1744444484.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:49,179 - __main__ - ERROR - Error processing nevacomputer_8750_1744444484.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:49,226 - __main__ - ERROR - Error processing nevacomputer_8751_1744444641.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:49,273 - __main__ - ERROR - Error processing nevacomputer_8752_1744444641.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:49,320 - __main__ - ERROR - Error processing nevacomputer_8753_1744444641.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:49,367 - __main__ - ERROR - Error processing nevacomputer_8754_1745141685.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:49,398 - __main__ - ERROR - Error processing nevacomputer_8755_1746804360.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:49,445 - __main__ - ERROR - Error processing nevacomputer_8756_1746804360.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:49,492 - __main__ - ERROR - Error processing nevacomputer_8757_1746804361.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:49,538 - __main__ - ERROR - Error processing nevacomputer_8758_1746804361.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:49,585 - __main__ - ERROR - Error processing nevacomputer_8762_1749016617.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:49,617 - __main__ - ERROR - Error processing nevacomputer_8763_1749016618.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:49,663 - __main__ - ERROR - Error processing nevacomputer_8764_1749017175.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:49,710 - __main__ - ERROR - Error processing nevacomputer_8765_1749017175.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:49,742 - __main__ - ERROR - Error processing nevacomputer_8766_1749017175.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:49,788 - __main__ - ERROR - Error processing nevacomputer_8767_1749017175.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:49,835 - __main__ - ERROR - Error processing nevacomputer_8768_1749026214.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:49,882 - __main__ - ERROR - Error processing nevacomputer_8769_1749026214.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:49,929 - __main__ - ERROR - Error processing nevacomputer_8770_1749026214.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:49,976 - __main__ - ERROR - Error processing nevacomputer_8771_1749505029.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:50,023 - __main__ - ERROR - Error processing nevacomputer_8772_1749505029.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:50,070 - __main__ - ERROR - Error processing nevacomputer_8773_1749650212.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:50,101 - __main__ - ERROR - Error processing nevacomputer_8774_1749650212.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:50,148 - __main__ - ERROR - Error processing nevacomputer_8775_1749650212.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:50,195 - __main__ - ERROR - Error processing nevacomputer_8776_1750487547.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:50,242 - __main__ - ERROR - Error processing nevacomputer_8777_1750487547.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:50,288 - __main__ - ERROR - Error processing nevacomputer_8778_1750487547.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:50,335 - __main__ - ERROR - Error processing nevacomputer_8779_1750487547.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:50,351 - __main__ - ERROR - Error processing Shageronlinestore_7306_1749278006.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:50,367 - __main__ - ERROR - Error processing Shageronlinestore_7307_1749458372.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:50,413 - __main__ - ERROR - Error processing Shageronlinestore_7308_1749458372.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:50,460 - __main__ - ERROR - Error processing Shageronlinestore_7309_1749458372.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:50,492 - __main__ - ERROR - Error processing Shageronlinestore_7311_1749536810.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:50,507 - __main__ - ERROR - Error processing Shageronlinestore_7312_1749623471.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:50,538 - __main__ - ERROR - Error processing Shageronlinestore_7313_1749623471.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:50,554 - __main__ - ERROR - Error processing Shageronlinestore_7315_1749649778.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:50,585 - __main__ - ERROR - Error processing Shageronlinestore_7316_1749717407.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:50,601 - __main__ - ERROR - Error processing Shageronlinestore_7317_1749717407.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:50,632 - __main__ - ERROR - Error processing Shageronlinestore_7318_1749717407.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:50,663 - __main__ - ERROR - Error processing Shageronlinestore_7319_1749717407.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:50,695 - __main__ - ERROR - Error processing Shageronlinestore_7320_1749717407.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:50,726 - __main__ - ERROR - Error processing Shageronlinestore_7323_1749723876.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:50,742 - __main__ - ERROR - Error processing Shageronlinestore_7324_1749723876.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:50,773 - __main__ - ERROR - Error processing Shageronlinestore_7325_1749723876.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:50,820 - __main__ - ERROR - Error processing Shageronlinestore_7326_1749723876.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:50,851 - __main__ - ERROR - Error processing Shageronlinestore_7327_1749723876.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:50,898 - __main__ - ERROR - Error processing Shageronlinestore_7329_1749795704.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:50,960 - __main__ - ERROR - Error processing Shageronlinestore_7330_1749795704.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:51,007 - __main__ - ERROR - Error processing Shageronlinestore_7331_1749795704.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:51,054 - __main__ - ERROR - Error processing Shageronlinestore_7332_1749814077.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:51,101 - __main__ - ERROR - Error processing Shageronlinestore_7333_1749814077.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:51,132 - __main__ - ERROR - Error processing Shageronlinestore_7334_1749814077.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:51,148 - __main__ - ERROR - Error processing Shageronlinestore_7335_1749814077.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:51,195 - __main__ - ERROR - Error processing Shageronlinestore_7336_1749831806.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:51,226 - __main__ - ERROR - Error processing Shageronlinestore_7337_1749831806.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:51,257 - __main__ - ERROR - Error processing Shageronlinestore_7338_1749831806.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:51,273 - __main__ - ERROR - Error processing Shageronlinestore_7339_1749882765.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:51,304 - __main__ - ERROR - Error processing Shageronlinestore_7340_1749882765.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:51,335 - __main__ - ERROR - Error processing Shageronlinestore_7341_1749882765.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:51,382 - __main__ - ERROR - Error processing Shageronlinestore_7343_1749896359.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:51,429 - __main__ - ERROR - Error processing Shageronlinestore_7344_1749896359.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:51,476 - __main__ - ERROR - Error processing Shageronlinestore_7345_1749896360.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:51,507 - __main__ - ERROR - Error processing Shageronlinestore_7346_1749896360.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:51,570 - __main__ - ERROR - Error processing Shageronlinestore_7347_1749896360.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:51,601 - __main__ - ERROR - Error processing Shageronlinestore_7348_1750055755.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:51,632 - __main__ - ERROR - Error processing Shageronlinestore_7349_1750055755.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:51,663 - __main__ - ERROR - Error processing Shageronlinestore_7350_1750055755.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:51,679 - __main__ - ERROR - Error processing Shageronlinestore_7351_1750055755.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:51,726 - __main__ - ERROR - Error processing Shageronlinestore_7352_1750073867.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:51,742 - __main__ - ERROR - Error processing Shageronlinestore_7353_1750073867.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:51,773 - __main__ - ERROR - Error processing Shageronlinestore_7354_1750073867.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:51,820 - __main__ - ERROR - Error processing Shageronlinestore_7355_1750073867.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:51,851 - __main__ - ERROR - Error processing Shageronlinestore_7356_1750073867.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:51,913 - __main__ - ERROR - Error processing Shageronlinestore_7357_1750073867.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:51,960 - __main__ - ERROR - Error processing Shageronlinestore_7360_1750145252.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:52,023 - __main__ - ERROR - Error processing Shageronlinestore_7361_1750145252.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:52,054 - __main__ - ERROR - Error processing Shageronlinestore_7362_1750145252.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:52,101 - __main__ - ERROR - Error processing Shageronlinestore_7363_1750145252.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:52,148 - __main__ - ERROR - Error processing Shageronlinestore_7364_1750145252.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:52,179 - __main__ - ERROR - Error processing Shageronlinestore_7365_1750145252.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:52,210 - __main__ - ERROR - Error processing Shageronlinestore_7366_1750149684.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:52,273 - __main__ - ERROR - Error processing Shageronlinestore_7367_1750149684.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:52,304 - __main__ - ERROR - Error processing Shageronlinestore_7370_1750172121.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:52,335 - __main__ - ERROR - Error processing Shageronlinestore_7371_1750172121.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:52,367 - __main__ - ERROR - Error processing Shageronlinestore_7372_1750172121.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:52,398 - __main__ - ERROR - Error processing Shageronlinestore_7373_1750172121.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:52,445 - __main__ - ERROR - Error processing Shageronlinestore_7374_1750172121.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:52,492 - __main__ - ERROR - Error processing Shageronlinestore_7375_1750185140.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:52,538 - __main__ - ERROR - Error processing Shageronlinestore_7378_1750245550.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:52,570 - __main__ - ERROR - Error processing Shageronlinestore_7379_1750245551.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:52,617 - __main__ - ERROR - Error processing Shageronlinestore_7380_1750245551.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:52,663 - __main__ - ERROR - Error processing Shageronlinestore_7381_1750245551.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:52,710 - __main__ - ERROR - Error processing Shageronlinestore_7382_1750245551.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:52,773 - __main__ - ERROR - Error processing Shageronlinestore_7383_1750314691.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:52,804 - __main__ - ERROR - Error processing Shageronlinestore_7384_1750336290.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:52,835 - __main__ - ERROR - Error processing Shageronlinestore_7385_1750336290.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:52,867 - __main__ - ERROR - Error processing Shageronlinestore_7386_1750336290.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:52,898 - __main__ - ERROR - Error processing Shageronlinestore_7387_1750336290.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:52,945 - __main__ - ERROR - Error processing Shageronlinestore_7388_1750336290.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:52,976 - __main__ - ERROR - Error processing Shageronlinestore_7389_1750336290.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:53,038 - __main__ - ERROR - Error processing Shageronlinestore_7390_1750402091.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:53,085 - __main__ - ERROR - Error processing Shageronlinestore_7391_1750410203.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:53,132 - __main__ - ERROR - Error processing Shageronlinestore_7392_1750410203.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:53,226 - __main__ - ERROR - Error processing Shageronlinestore_7393_1750420073.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:53,320 - __main__ - ERROR - Error processing Shageronlinestore_7394_1750420073.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:53,367 - __main__ - ERROR - Error processing Shageronlinestore_7395_1750433140.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:53,398 - __main__ - ERROR - Error processing Shageronlinestore_7396_1750433140.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:53,445 - __main__ - ERROR - Error processing Shageronlinestore_7397_1750433140.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:53,476 - __main__ - ERROR - Error processing Shageronlinestore_7398_1750433141.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:53,523 - __main__ - ERROR - Error processing Shageronlinestore_7399_1750433141.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:53,570 - __main__ - ERROR - Error processing Shageronlinestore_7401_1750489355.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:53,617 - __main__ - ERROR - Error processing Shageronlinestore_7403_1750515320.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:53,663 - __main__ - ERROR - Error processing Shageronlinestore_7404_1750515321.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:53,679 - __main__ - ERROR - Error processing Shageronlinestore_7405_1750515321.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:53,726 - __main__ - ERROR - Error processing ZemenExpress_6888_1749121031.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:53,757 - __main__ - ERROR - Error processing ZemenExpress_6889_1749121032.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:53,788 - __main__ - ERROR - Error processing ZemenExpress_6890_1749121032.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:53,835 - __main__ - ERROR - Error processing ZemenExpress_6891_1749121032.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:53,882 - __main__ - ERROR - Error processing ZemenExpress_6892_1749146242.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:53,913 - __main__ - ERROR - Error processing ZemenExpress_6893_1749146242.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:53,945 - __main__ - ERROR - Error processing ZemenExpress_6894_1749146242.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:54,007 - __main__ - ERROR - Error processing ZemenExpress_6895_1749146242.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:54,054 - __main__ - ERROR - Error processing ZemenExpress_6896_1749187153.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:54,085 - __main__ - ERROR - Error processing ZemenExpress_6897_1749198248.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:54,117 - __main__ - ERROR - Error processing ZemenExpress_6898_1749198248.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:54,148 - __main__ - ERROR - Error processing ZemenExpress_6900_1749211285.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:54,163 - __main__ - ERROR - Error processing ZemenExpress_6901_1749211285.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:54,195 - __main__ - ERROR - Error processing ZemenExpress_6902_1749211285.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:54,242 - __main__ - ERROR - Error processing ZemenExpress_6903_1749211285.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:54,257 - __main__ - ERROR - Error processing ZemenExpress_6904_1749211285.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:54,320 - __main__ - ERROR - Error processing ZemenExpress_6906_1749454276.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:54,351 - __main__ - ERROR - Error processing ZemenExpress_6908_1749455067.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:54,367 - __main__ - ERROR - Error processing ZemenExpress_6909_1749455067.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:54,398 - __main__ - ERROR - Error processing ZemenExpress_6910_1749455067.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:54,429 - __main__ - ERROR - Error processing ZemenExpress_6911_1749455067.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:54,460 - __main__ - ERROR - Error processing ZemenExpress_6912_1749473372.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:54,492 - __main__ - ERROR - Error processing ZemenExpress_6913_1749473372.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:54,523 - __main__ - ERROR - Error processing ZemenExpress_6914_1749473372.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:54,570 - __main__ - ERROR - Error processing ZemenExpress_6915_1749473372.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:54,601 - __main__ - ERROR - Error processing ZemenExpress_6917_1749547918.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:54,648 - __main__ - ERROR - Error processing ZemenExpress_6918_1749547918.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:54,679 - __main__ - ERROR - Error processing ZemenExpress_6919_1749547918.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:54,726 - __main__ - ERROR - Error processing ZemenExpress_6920_1749547918.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:54,757 - __main__ - ERROR - Error processing ZemenExpress_6921_1749547918.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:54,804 - __main__ - ERROR - Error processing ZemenExpress_6922_1749547918.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:54,835 - __main__ - ERROR - Error processing ZemenExpress_6923_1749617696.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:54,867 - __main__ - ERROR - Error processing ZemenExpress_6924_1749617696.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:54,898 - __main__ - ERROR - Error processing ZemenExpress_6925_1749617696.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:54,929 - __main__ - ERROR - Error processing ZemenExpress_6929_1749617791.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:54,960 - __main__ - ERROR - Error processing ZemenExpress_6930_1749617791.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:54,976 - __main__ - ERROR - Error processing ZemenExpress_6931_1749617792.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:55,007 - __main__ - ERROR - Error processing ZemenExpress_6933_1749703972.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:55,038 - __main__ - ERROR - Error processing ZemenExpress_6934_1749703972.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:55,070 - __main__ - ERROR - Error processing ZemenExpress_6935_1749703972.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:55,085 - __main__ - ERROR - Error processing ZemenExpress_6936_1749722405.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:55,117 - __main__ - ERROR - Error processing ZemenExpress_6937_1749722405.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:55,163 - __main__ - ERROR - Error processing ZemenExpress_6939_1749798902.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:55,210 - __main__ - ERROR - Error processing ZemenExpress_6940_1749798902.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:55,257 - __main__ - ERROR - Error processing ZemenExpress_6941_1749798902.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:55,304 - __main__ - ERROR - Error processing ZemenExpress_6942_1749798902.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:55,351 - __main__ - ERROR - Error processing ZemenExpress_6943_1749798902.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:55,398 - __main__ - ERROR - Error processing ZemenExpress_6944_1749798902.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:55,429 - __main__ - ERROR - Error processing ZemenExpress_6947_1749804162.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:55,460 - __main__ - ERROR - Error processing ZemenExpress_6948_1749804163.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:55,492 - __main__ - ERROR - Error processing ZemenExpress_6949_1749804163.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:55,523 - __main__ - ERROR - Error processing ZemenExpress_6950_1749815691.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:55,554 - __main__ - ERROR - Error processing ZemenExpress_6951_1749815691.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:55,585 - __main__ - ERROR - Error processing ZemenExpress_6952_1749815691.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:55,617 - __main__ - ERROR - Error processing ZemenExpress_6953_1749815691.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:55,648 - __main__ - ERROR - Error processing ZemenExpress_6959_1749886741.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:55,695 - __main__ - ERROR - Error processing ZemenExpress_6960_1749886741.jpg: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:55,695 - __main__ - WARNING - No valid images found to process
+2025-06-22 12:51:55,695 - __main__ - INFO - Processing images from ZIP archives...
+2025-06-22 12:51:55,742 - __main__ - ERROR - Error processing nevacomputer_images.zip: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:55,773 - __main__ - ERROR - Error processing Shageronlinestore_images.zip: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:55,804 - __main__ - ERROR - Error processing ZemenExpress_images.zip: tesseract is not installed or it's not in your PATH. See README file for more information.
+2025-06-22 12:51:55,804 - __main__ - WARNING - No valid images found in ZIP files
+2025-06-22 12:51:55,820 - __main__ - INFO - Data cleaning pipeline completed successfully
+2025-06-22 13:38:39,453 - __main__ - INFO - Loading combined data from data\raw\all_messages_combined.csv
+2025-06-22 13:38:39,484 - __main__ - INFO - Processing message data...
+2025-06-22 13:38:39,718 - __main__ - INFO - Saved cleaned messages to data\processed\cleaned_messages.parquet
+2025-06-22 13:38:39,718 - __main__ - INFO - Saved processing metadata to data\processed\processing_metadata.json
+2025-06-22 13:38:39,718 - __main__ - INFO - Processing images from media directory...
+2025-06-22 13:42:10,666 - __main__ - INFO - Saved image text data to data\processed\image_text.parquet
+2025-06-22 13:42:10,666 - __main__ - INFO - Processing images from ZIP archives...
+2025-06-22 13:45:41,564 - __main__ - INFO - Saved zipped image text data to data\processed\zipped_image_text.parquet
+2025-06-22 13:45:41,564 - __main__ - INFO - Data cleaning pipeline completed successfully
