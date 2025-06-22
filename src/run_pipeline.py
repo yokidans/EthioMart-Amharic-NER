@@ -8,15 +8,15 @@ def full_pipeline():
     # Step 1: Data collection
     scraper = EthioMartScraper()
     scraper.run()
-    
+
     # Step 2: Preprocessing
     processor = EthioMartPreprocessor()
     processor.process_existing_data()
     processor.process_images()
-    
+
     # Step 3: Model training
     train()
-    
+
     print("Pipeline executed successfully")
 
 
