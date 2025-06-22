@@ -1,0 +1,10 @@
+2025-06-22 19:39:03,000 - __main__ - INFO - Loading labeled data from data\labeled\Labeled_telegram_product_price_location.txt
+2025-06-22 19:39:03,094 - __main__ - INFO - Loading cleaned messages from data\processed\cleaned_messages.parquet
+2025-06-22 19:39:14,255 - __main__ - INFO - Saved 0 entries to data\labeled\train.jsonl
+2025-06-22 19:39:14,271 - __main__ - INFO - Saved 0 entries to data\labeled\val.jsonl
+2025-06-22 19:39:14,397 - __main__ - INFO - Prepared 139715 training and 34929 validation samples
+2025-06-22 19:46:07,582 - __main__ - INFO - Loading labeled data from data\labeled\Labeled_telegram_product_price_location.txt
+2025-06-22 19:46:07,757 - __main__ - INFO - Loading cleaned messages from data\processed\cleaned_messages.parquet
+2025-06-22 19:46:08,548 - __main__ - INFO - Saved 2532 entries to data\labeled\train.jsonl
+2025-06-22 19:46:08,557 - __main__ - INFO - Saved 634 entries to data\labeled\val.jsonl
+2025-06-22 19:46:08,623 - __main__ - INFO - Prepared 2532 training and 634 validation samples
