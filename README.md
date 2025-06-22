@@ -1,6 +1,6 @@
-# EthioMart Amharic NER Project
+# EthioMart Amharic NER 
 
-## Project Overview
+## Overview
 A Named Entity Recognition (NER) system for Ethiopian e-commerce Telegram data, focusing on:
 - Product names (`B-PRODUCT`, `I-PRODUCT`)
 - Prices (`B-PRICE`, `I-PRICE`) 
