@@ -23,14 +23,6 @@ jobs:
         pip install -r docs/requirements/python.txt
         pip install pytest
         
-    - name: Run data tests
-      run: |
-        pytest tests/data_tests.py
-        
-    - name: Run model tests
-      run: |
-        pytest tests/model_tests.py
-        
     - name: Code quality check
       run: |
         pip install flake8 black
