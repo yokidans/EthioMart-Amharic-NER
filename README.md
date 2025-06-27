@@ -27,15 +27,3 @@
 
     # For GPU acceleration (optional)
     - pip install nvidia-cudnn-cu11==8.6.0.163 triton==2.0.0
-
-  ```mermaid
-    graph TD
-           A[Raw Amharic Text] --> B[XLM-ROBERTa Tokenizer]
-           B --> C[Subword Tokens]
-           C --> D[Transformer Encoder]
-           D --> E[Token Classifier Head]
-           E --> F[Entity Tags]
-
-
-
-
