@@ -1,0 +1,222 @@
+{
+  "metadata": {
+    "timestamp": "2025-06-27T00:07:32.808015Z",
+    "system": {
+      "platform": "Windows-10-10.0.22631-SP0",
+      "processor": "Intel64 Family 6 Model 78 Stepping 3, GenuineIntel",
+      "memory_gb": 7.858867645263672,
+      "python_version": "3.9.13",
+      "cpu_cores": 4,
+      "load_avg": null
+    },
+    "gpu": {
+      "available": false
+    },
+    "model": {
+      "path": "models\\fine_tuned\\ethiomart_ner",
+      "num_parameters": 277459208,
+      "trainable_parameters": 277459208,
+      "config": {
+        "return_dict": true,
+        "output_hidden_states": false,
+        "output_attentions": false,
+        "torchscript": false,
+        "torch_dtype": "float32",
+        "use_bfloat16": false,
+        "tf_legacy_loss": false,
+        "pruned_heads": {},
+        "tie_word_embeddings": true,
+        "chunk_size_feed_forward": 0,
+        "is_encoder_decoder": false,
+        "is_decoder": false,
+        "cross_attention_hidden_size": null,
+        "add_cross_attention": false,
+        "tie_encoder_decoder": false,
+        "max_length": 20,
+        "min_length": 0,
+        "do_sample": false,
+        "early_stopping": false,
+        "num_beams": 1,
+        "num_beam_groups": 1,
+        "diversity_penalty": 0.0,
+        "temperature": 1.0,
+        "top_k": 50,
+        "top_p": 1.0,
+        "typical_p": 1.0,
+        "repetition_penalty": 1.0,
+        "length_penalty": 1.0,
+        "no_repeat_ngram_size": 0,
+        "encoder_no_repeat_ngram_size": 0,
+        "bad_words_ids": null,
+        "num_return_sequences": 1,
+        "output_scores": false,
+        "return_dict_in_generate": false,
+        "forced_bos_token_id": null,
+        "forced_eos_token_id": null,
+        "remove_invalid_values": false,
+        "exponential_decay_length_penalty": null,
+        "suppress_tokens": null,
+        "begin_suppress_tokens": null,
+        "architectures": [
+          "XLMRobertaForTokenClassification"
+        ],
+        "finetuning_task": null,
+        "id2label": {
+          "0": "O",
+          "1": "B-PRODUCT",
+          "2": "B-LOC",
+          "3": "I-PRODUCT",
+          "4": "B-PRICE",
+          "5": "I-PRICE",
+          "6": "B-PHONE",
+          "7": "I-PHONE"
+        },
+        "label2id": {
+          "B-LOC": 2,
+          "B-PHONE": 6,
+          "B-PRICE": 4,
+          "B-PRODUCT": 1,
+          "I-PHONE": 7,
+          "I-PRICE": 5,
+          "I-PRODUCT": 3,
+          "O": 0
+        },
+        "tokenizer_class": null,
+        "prefix": null,
+        "bos_token_id": 0,
+        "pad_token_id": 1,
+        "eos_token_id": 2,
+        "sep_token_id": null,
+        "decoder_start_token_id": null,
+        "task_specific_params": null,
+        "problem_type": null,
+        "_name_or_path": "models\\fine_tuned\\ethiomart_ner",
+        "transformers_version": "4.52.4",
+        "model_type": "xlm-roberta",
+        "output_past": true,
+        "vocab_size": 250002,
+        "hidden_size": 768,
+        "num_hidden_layers": 12,
+        "num_attention_heads": 12,
+        "hidden_act": "gelu",
+        "intermediate_size": 3072,
+        "hidden_dropout_prob": 0.1,
+        "attention_probs_dropout_prob": 0.1,
+        "max_position_embeddings": 514,
+        "type_vocab_size": 1,
+        "initializer_range": 0.02,
+        "layer_norm_eps": 1e-05,
+        "position_embedding_type": "absolute",
+        "use_cache": true,
+        "classifier_dropout": null
+      },
+      "tokenizer": {
+        "vocab_size": 250002,
+        "model_max_length": 512
+      }
+    },
+    "environment": {
+      "torch_version": "2.7.1+cpu",
+      "transformers_version": "4.52.4",
+      "shap_version": "0.41.0",
+      "lime_version": "0.2.0.1"
+    }
+  },
+  "metrics": {
+    "LOC": {
+      "precision": 0.9863813229571985,
+      "recall": 0.9863813229571985,
+      "f1-score": 0.9863813229571985,
+      "support": 514
+    },
+    "PRICE": {
+      "precision": 0.9574700109051254,
+      "recall": 0.9627192982456141,
+      "f1-score": 0.9600874794969929,
+      "support": 912
+    },
+    "PRODUCT": {
+      "precision": 0.7974683544303798,
+      "recall": 0.84375,
+      "f1-score": 0.8199566160520607,
+      "support": 224
+    },
+    "micro avg": {
+      "precision": 0.9436450839328537,
+      "recall": 0.953939393939394,
+      "f1-score": 0.9487643158529235,
+      "support": 1650
+    },
+    "macro avg": {
+      "precision": 0.9137732294309012,
+      "recall": 0.9309502070676041,
+      "f1-score": 0.9221418061687507,
+      "support": 1650
+    },
+    "weighted avg": {
+      "precision": 0.9447548856593209,
+      "recall": 0.953939393939394,
+      "f1-score": 0.9492545838163146,
+      "support": 1650
+    },
+    "num_samples": 627,
+    "average_length": 56.60765550239235,
+    "class_distribution": {
+      "O": 32787,
+      "B-PRICE": 967,
+      "B-LOC": 586,
+      "B-PRODUCT": 224,
+      "I-PRODUCT": 246,
+      "I-PRICE": 683
+    }
+  },
+  "interpretability": {
+    "failure_cases": [
+      {
+        "text": "gel toilet bowl cleaner \u121d\u129d\u1273 \u1264\u1273\u127d\u1201 \u12cd\u1235\u1325 \u1218\u1340\u12f3\u1303 \u1264\u1275 \u120b\u120b\u127d\u1201 \u1230\u12c8\u127d \u1325\u1229 \u1218\u134d\u1275\u1204 \u12ed\u12d8\u1295 \u1218\u1270\u1293\u120d \u1218\u1340\u12f3\u1303 \u1264\u1273\u127d\u1295 \u1325\u1229 \u123d\u1273 \u12a5\u1295\u12f2\u1296\u1228\u12c9 \u12e8\u121a\u12eb\u12f0\u122d\u130d \u1208\u12a0\u1320\u1243\u1240\u121d \u1240\u120b\u120d \u12a0\u1295\u12f4 \u1308\u12dd\u1273\u127d\u1201\u1275 \u1228\u1305\u121d \u130a\u12dc \u12e8\u121a\u1320\u1240\u1219\u1260\u1275 \u12cb\u130b:-500\u1265\u122d \u12a0\u12f5\u122b\u123b \u1218\u1308\u1293\u129b \u1235\u122a \u12a4\u121d \u1232\u1272 \u121e\u120d \u1201\u1208\u1270\u129b \u134e\u1245 \u1262\u122e \u1241. SL-05A(\u12a8 \u120a\u134d\u1271 \u134a\u1275 \u1208 \u134a\u1275) 0909522840 0923350054 \u1260Telegram \u1208\u121b\u12d8\u12dd \u12ed\u1320\u1240\u1219 @shager_onlinestore \u1208\u1270\u1328\u121b\u122a \u121b\u1265\u122b\u122a\u12eb \u12e8\u1274\u120c\u130d\u122b\u121d \u1308\u1343\u127d\u1295 https://t.me/Shageronlinestore",
+        "errors": [],
+        "explanations": {},
+        "num_tokens": 55,
+        "num_errors": 0
+      },
+      {
+        "text": "Intergrated brushing and pouring seasoning bottle 630ml visual scale stainless steel nozzle it had silicon brush head intergrated brushing and pouring \u12cb\u130b:-750\u1265\u122d \u12cd\u1235\u1295 \u134d\u122c \u1290\u12cd \u12eb\u1208\u1295 \u12a0\u12f5\u122b\u123b \u1218\u1308\u1293\u129b \u1235\u122a \u12a4\u121d \u1232\u1272 \u121e\u120d \u1201\u1208\u1270\u129b \u134e\u1245 \u1262\u122e \u1241. SL-05A(\u12a8 \u120a\u134d\u1271 \u134a\u1275 \u1208 \u134a\u1275) 0909522840 0923350054 \u1260Telegram \u1208\u121b\u12d8\u12dd \u12ed\u1320\u1240\u1219 @shager_onlinestore \u1208\u1270\u1328\u121b\u122a \u121b\u1265\u122b\u122a\u12eb \u12e8\u1274\u120c\u130d\u122b\u121d \u1308\u1343\u127d\u1295 https://t.me/Shageronlinestore",
+        "errors": [],
+        "explanations": {},
+        "num_tokens": 52,
+        "num_errors": 0
+      },
+      {
+        "text": "Universal water-saving dishwasher head Increase water outlet pressure and rinse efficiently. 360 \u00b0 rotating head 100% functional !! \u12cb\u130b\u1366 350 \u1265\u122d \u12cd\u1235\u1295 \u134d\u122c \u1290\u12cd \u12eb\u1208\u12cd \u12a0\u12f5\u122b\u123b \u1218\u1308\u1293\u129b \u1273\u121c \u130b\u1235 \u1205\u1295\u1343 \u130e\u1295 \u1235\u122a \u12a4\u121d \u1232\u1272 \u121e\u120d \u1201\u1208\u1270\u129b \u134e\u1245 \u1262\u122e \u1241. SL-05A (\u12a8 \u120a\u134d\u1271 \u134a\u1275 \u1208 \u134a\u1275) 0909522840 0923350054 \u1260Telegram \u1208\u121b\u12d8\u12dd \u12ed\u1320\u1240\u1219 @shager_onlinestore \u1208\u1270\u1328\u121b\u122a \u121b\u1265\u122b\u122a\u12eb \u12e8\u1274\u120c\u130d\u122b\u121d \u1308\u1343\u127d\u1295 https://t.me/Shageronlinestore",
+        "errors": [],
+        "explanations": {},
+        "num_tokens": 56,
+        "num_errors": 0
+      },
+      {
+        "text": "Foldable electric mosquito swatter (insect killer) high quality security powerfull durable lasting \u1208\u1262\u1295\u1262 \u12a5\u1293 \u1208\u1270\u1208\u12eb\u12e9 \u1290\u134d\u1233\u1276\u127d \u1218\u130d\u12f0\u12eb control method:- unplug the power supply to the position of \"-\" or \"+\" with lights do nat rinse with water or wipe with a towel please keep the electric mosquito swatter dry,so as not to damage internal electronics if the mosquito swatter has nat been used for a long time, please charge it for 8-10 hours before use \u12cb\u130b:-1400\u1265\u122d \u12a0\u12f5\u122b\u123b \u1218\u1308\u1293\u129b \u1235\u122a \u12a4\u121d \u1232\u1272 \u121e\u120d \u1201\u1208\u1270\u129b \u134e\u1245 \u1262\u122e \u1241. SL-05A(\u12a8 \u120a\u134d\u1271 \u134a\u1275 \u1208 \u134a\u1275) 0909522840 0923350054 \u1260Telegram \u1208\u121b\u12d8\u12dd \u12ed\u1320\u1240\u1219 @shager_onlinestore \u1208\u1270\u1328\u121b\u122a \u121b\u1265\u122b\u122a\u12eb \u12e8\u1274\u120c\u130d\u122b\u121d \u1308\u1343\u127d\u1295 https://t.me/Shageronlinestore",
+        "errors": [],
+        "explanations": {},
+        "num_tokens": 102,
+        "num_errors": 0
+      },
+      {
+        "text": "#\u120d\u12e9_\u12e8\u1308\u1293_\u1260\u12d3\u120d_\u12cb\u12dc\u121b_\u1245\u1293\u123d \u1208\u12c8\u12f3\u1305 \u12d8\u1218\u12f5\u12ce \u12e8\u121a\u1230\u1321\u1275 \u1275\u120d\u1245 \u1235\u1326\u1273 High quality perfect gift for ur family, friends and loved ones Stainless Steel Vacuum Flask Material: Stainless steel Insulation performance: 6-12 hours Capacity: about 500ML Size: as shown Packing: gift box #Package_includes: 1* Stainless steel vacuum flask 2* Share water cup \u12cb\u130b:-1200\u1265\u122d 1000\u1265\u122d \u12a0\u12f5\u122b\u123b \u1218\u1308\u1293\u129b \u1235\u122a \u12a4\u121d \u1232\u1272 \u121e\u120d \u1201\u1208\u1270\u129b \u134e\u1245 \u1262\u122e \u1241. SL-05A(\u12a8 \u120a\u134d\u1271 \u134a\u1275 \u1208 \u134a\u1275) 0909522840 0923350054 \u1260Telegram \u1208\u121b\u12d8\u12dd \u12ed\u1320\u1240\u1219 @shager_onlinestore \u1208\u1270\u1328\u121b\u122a \u121b\u1265\u122b\u122a\u12eb \u12e8\u1274\u120c\u130d\u122b\u121d \u1308\u1343\u127d\u1295 https://t.me/Shageronlinestore",
+        "errors": [],
+        "explanations": {},
+        "num_tokens": 75,
+        "num_errors": 0
+      }
+    ],
+    "embedding_analysis": {
+      "status": "error",
+      "error": "Trace type 'scatter3d' is not compatible with subplot type 'xy'\nat grid position (1, 1)\n\nSee the docstring for the specs argument to plotly.subplots.make_subplots\nfor more information on subplot types",
+      "fallback_action": "Reducing sample size or checking token alignment"
+    },
+    "feature_importance": {
+      "status": "error",
+      "error": "No successful SHAP explanations"
+    }
+  },
+  "recommendations": "No specific recommendations - model looks good!"
+}

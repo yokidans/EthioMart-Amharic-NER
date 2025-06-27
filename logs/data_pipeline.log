@@ -1,0 +1,7 @@
+2025-06-26 01:44:27,997 - __main__ - INFO - Directory structure validated
+2025-06-26 01:44:27,997 - __main__ - INFO - Processing input file: C:\Users\tefer\Desktop\EthioMart-Amharic-NER\data\labeled\labeled_telegram_product_price_location.txt
+2025-06-26 01:44:28,873 - __main__ - INFO - Processed 3134 sentences (32 errors)
+2025-06-26 01:44:29,029 - __main__ - INFO - Wrote 2507 sentences to C:\Users\tefer\Desktop\EthioMart-Amharic-NER\data\labeled\train.conll
+2025-06-26 01:44:29,076 - __main__ - INFO - Wrote 627 sentences to C:\Users\tefer\Desktop\EthioMart-Amharic-NER\data\labeled\val.conll
+2025-06-26 01:44:29,217 - __main__ - INFO - Quality report saved to C:\Users\tefer\Desktop\EthioMart-Amharic-NER\data\processed\data_quality_report.json
+2025-06-26 01:44:29,248 - __main__ - INFO - Pipeline completed successfully

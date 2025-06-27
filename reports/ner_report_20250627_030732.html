@@ -1,0 +1,220 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>NER Model Analysis Report</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+                h1, h2, h3, h4 { color: #2c3e50; }
+                .section { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+                .case { border: 1px solid #ddd; padding: 15px; margin-bottom: 20px; background: #f9f9f9; }
+                table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+                th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+                th { background: #f2f2f2; }
+                pre { background: #f5f5f5; padding: 10px; overflow-x: auto; }
+                img, iframe { max-width: 100%; margin: 10px 0; border: 1px solid #ddd; }
+                .metrics th, .metrics td { width: 50%; }
+                .distribution th, .distribution td { width: 33%; }
+                .feature-importance th, .feature-importance td { width: 25%; }
+                small { color: #666; }
+            </style>
+        </head>
+        <body>
+            <h1>NER Model Analysis Report</h1>
+            <p>Generated at 2025-06-27T00:07:32.808015Z</p>
+            
+            <div class="section">
+                <h2>Summary</h2>
+                <p>Overall F1-score: <strong>0.949</strong></p>
+                <p>Failure cases analyzed: <strong>5</strong></p>
+            </div>
+            
+            <div class="section">
+                
+        <div class="metrics">
+            <h2>Performance Metrics</h2>
+            <table>
+                <tr><th>Metric</th><th>Value</th></tr>
+        
+                <tr><td>Overall F1</td><td>0.9493</td></tr>
+                <tr><td>Precision</td><td>0.9448</td></tr>
+                <tr><td>Recall</td><td>0.9539</td></tr>
+                <tr><td>Number of Samples</td><td>627</td></tr>
+                <tr><td>Average Length</td><td>56.6</td></tr>
+            
+                <tr><td colspan="2"><h3>Per-class Metrics</h3></td></tr>
+                
+                        <tr>
+                            <td>LOC</td>
+                            <td>P=0.986, 
+                                R=0.986, 
+                                F1=0.986, 
+                                Support=514</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>PRICE</td>
+                            <td>P=0.957, 
+                                R=0.963, 
+                                F1=0.960, 
+                                Support=912</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>PRODUCT</td>
+                            <td>P=0.797, 
+                                R=0.844, 
+                                F1=0.820, 
+                                Support=224</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>micro avg</td>
+                            <td>P=0.944, 
+                                R=0.954, 
+                                F1=0.949, 
+                                Support=1650</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>macro avg</td>
+                            <td>P=0.914, 
+                                R=0.931, 
+                                F1=0.922, 
+                                Support=1650</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>weighted avg</td>
+                            <td>P=0.945, 
+                                R=0.954, 
+                                F1=0.949, 
+                                Support=1650</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>class_distribution</td>
+                            <td>P=0.000, 
+                                R=0.000, 
+                                F1=0.000, 
+                                Support=0</td>
+                        </tr>
+                        </table></div>
+            <div class="distribution">
+                <h3>Class Distribution</h3>
+                <table>
+                    <tr><th>Class</th><th>Count</th><th>Percentage</th></tr>
+            
+                <tr>
+                    <td>B-LOC</td>
+                    <td>586</td>
+                    <td>1.7%</td>
+                </tr>
+                
+                <tr>
+                    <td>B-PRICE</td>
+                    <td>967</td>
+                    <td>2.7%</td>
+                </tr>
+                
+                <tr>
+                    <td>B-PRODUCT</td>
+                    <td>224</td>
+                    <td>0.6%</td>
+                </tr>
+                
+                <tr>
+                    <td>I-PRICE</td>
+                    <td>683</td>
+                    <td>1.9%</td>
+                </tr>
+                
+                <tr>
+                    <td>I-PRODUCT</td>
+                    <td>246</td>
+                    <td>0.7%</td>
+                </tr>
+                
+                <tr>
+                    <td>O</td>
+                    <td>32787</td>
+                    <td>92.4%</td>
+                </tr>
+                </table></div>
+            </div>
+            
+            <div class="section">
+                <h2>Failure Case Analysis</h2>
+                
+            <div class="case">
+                <h3>Text: gel toilet bowl cleaner ምኝታ ቤታችሁ ውስጥ መፀዳጃ ቤት ላላችሁ ሰወች ጥሩ መፍትሄ ይዘን መተናል መፀዳጃ ቤታችን ጥሩ ሽታ እንዲኖረዉ የሚያደርግ ለአጠቃቀም ቀላል አንዴ ገዝታችሁት ረጅም ጊዜ የሚጠቀሙበት ዋጋ:-500ብር አድራሻ መገናኛ ስሪ ኤም ሲቲ ሞል ሁለተኛ ፎቅ ቢሮ ቁ. SL-05A(ከ ሊፍቱ ፊት ለ ፊት) 0909522840 0923350054 በTelegram ለማዘዝ ይጠቀሙ @shager_onlinestore ለተጨማሪ ማብራሪያ የቴሌግራም ገፃችን https://t.me/Shageronlinestore</h3>
+                <p><strong>Tokens:</strong> 55 | 
+                <strong>Errors:</strong> 0</p>
+                <div class="errors"><pre></pre></div>
+                
+            </div>
+            
+            <div class="case">
+                <h3>Text: Intergrated brushing and pouring seasoning bottle 630ml visual scale stainless steel nozzle it had silicon brush head intergrated brushing and pouring ዋጋ:-750ብር ውስን ፍሬ ነው ያለን አድራሻ መገናኛ ስሪ ኤም ሲቲ ሞል ሁለተኛ ፎቅ ቢሮ ቁ. SL-05A(ከ ሊፍቱ ፊት ለ ፊት) 0909522840 0923350054 በTelegram ለማዘዝ ይጠቀሙ @shager_onlinestore ለተጨማሪ ማብራሪያ የቴሌግራም ገፃችን https://t.me/Shageronlinestore</h3>
+                <p><strong>Tokens:</strong> 52 | 
+                <strong>Errors:</strong> 0</p>
+                <div class="errors"><pre></pre></div>
+                
+            </div>
+            
+            <div class="case">
+                <h3>Text: Universal water-saving dishwasher head Increase water outlet pressure and rinse efficiently. 360 ° rotating head 100% functional !! ዋጋ፦ 350 ብር ውስን ፍሬ ነው ያለው አድራሻ መገናኛ ታሜ ጋስ ህንፃ ጎን ስሪ ኤም ሲቲ ሞል ሁለተኛ ፎቅ ቢሮ ቁ. SL-05A (ከ ሊፍቱ ፊት ለ ፊት) 0909522840 0923350054 በTelegram ለማዘዝ ይጠቀሙ @shager_onlinestore ለተጨማሪ ማብራሪያ የቴሌግራም ገፃችን https://t.me/Shageronlinestore</h3>
+                <p><strong>Tokens:</strong> 56 | 
+                <strong>Errors:</strong> 0</p>
+                <div class="errors"><pre></pre></div>
+                
+            </div>
+            
+            <div class="case">
+                <h3>Text: Foldable electric mosquito swatter (insect killer) high quality security powerfull durable lasting ለቢንቢ እና ለተለያዩ ነፍሳቶች መግደያ control method:- unplug the power supply to the position of &quot;-&quot; or &quot;+&quot; with lights do nat rinse with water or wipe with a towel please keep the electric mosquito swatter dry,so as not to damage internal electronics if the mosquito swatter has nat been used for a long time, please charge it for 8-10 hours before use ዋጋ:-1400ብር አድራሻ መገናኛ ስሪ ኤም ሲቲ ሞል ሁለተኛ ፎቅ ቢሮ ቁ. SL-05A(ከ ሊፍቱ ፊት ለ ፊት) 0909522840 0923350054 በTelegram ለማዘዝ ይጠቀሙ @shager_onlinestore ለተጨማሪ ማብራሪያ የቴሌግራም ገፃችን https://t.me/Shageronlinestore</h3>
+                <p><strong>Tokens:</strong> 102 | 
+                <strong>Errors:</strong> 0</p>
+                <div class="errors"><pre></pre></div>
+                
+            </div>
+            
+            <div class="case">
+                <h3>Text: #ልዩ_የገና_በዓል_ዋዜማ_ቅናሽ ለወዳጅ ዘመድዎ የሚሰጡት ትልቅ ስጦታ High quality perfect gift for ur family, friends and loved ones Stainless Steel Vacuum Flask Material: Stainless steel Insulation performance: 6-12 hours Capacity: about 500ML Size: as shown Packing: gift box #Package_includes: 1* Stainless steel vacuum flask 2* Share water cup ዋጋ:-1200ብር 1000ብር አድራሻ መገናኛ ስሪ ኤም ሲቲ ሞል ሁለተኛ ፎቅ ቢሮ ቁ. SL-05A(ከ ሊፍቱ ፊት ለ ፊት) 0909522840 0923350054 በTelegram ለማዘዝ ይጠቀሙ @shager_onlinestore ለተጨማሪ ማብራሪያ የቴሌግራም ገፃችን https://t.me/Shageronlinestore</h3>
+                <p><strong>Tokens:</strong> 75 | 
+                <strong>Errors:</strong> 0</p>
+                <div class="errors"><pre></pre></div>
+                
+            </div>
+            
+            </div>
+            
+            
+            
+            
+            
+            <div class="section">
+                <h2>Recommendations</h2>
+                <pre>No specific recommendations - model looks good!</pre>
+            </div>
+            
+            
+        <div class="metadata">
+            <h2>System Information</h2>
+            <table>
+        
+                <tr><td>Platform</td><td>Windows-10-10.0.22631-SP0</td></tr>
+                <tr><td>Processor</td><td>Intel64 Family 6 Model 78 Stepping 3, GenuineIntel</td></tr>
+                <tr><td>Memory</td><td>7.9 GB</td></tr>
+                <tr><td>Python</td><td>3.9.13</td></tr>
+            </table>
+            <h3>Model Information</h3>
+            <table>
+                <tr><td>Path</td><td>models\fine_tuned\ethiomart_ner</td></tr>
+                <tr><td>Parameters</td><td>277,459,208</td></tr>
+                <tr><td>Trainable Parameters</td><td>277,459,208</td></tr>
+                <tr><td>Vocabulary Size</td><td>250002</td></tr>
+            </table>
+            </div>
+        </body>
+        </html>
+        
