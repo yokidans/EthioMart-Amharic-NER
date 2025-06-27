@@ -28,7 +28,7 @@
     # For GPU acceleration (optional)
     - pip install nvidia-cudnn-cu11==8.6.0.163 triton==2.0.0
 
-
+   ```markd
     graph TD
            A[Raw Amharic Text] --> B[XLM-ROBERTa Tokenizer]
            B --> C[Subword Tokens]
