@@ -1,0 +1,18 @@
+[
+  {
+    "model_name": "xlm-roberta-base",
+    "error": "__init__() got an unexpected keyword argument 'evaluation_strategy'"
+  },
+  {
+    "model_name": "distilbert-base-multilingual-cased",
+    "error": "__init__() got an unexpected keyword argument 'evaluation_strategy'"
+  },
+  {
+    "model_name": "bert-base-multilingual-cased",
+    "error": "__init__() got an unexpected keyword argument 'evaluation_strategy'"
+  },
+  {
+    "model_name": "google/rembert",
+    "error": "__init__() got an unexpected keyword argument 'evaluation_strategy'"
+  }
+]
