@@ -1,0 +1,28 @@
+{
+  "tag_distribution": {
+    "O": 159997,
+    "B-PRICE": 4701,
+    "I-PRICE": 3414,
+    "B-LOC": 2842,
+    "B-PRODUCT": 1201,
+    "I-PRODUCT": 1217
+  },
+  "entity_consistency": {
+    "PRICE": {
+      "correct": 2770,
+      "total": 4701
+    },
+    "PRODUCT": {
+      "correct": 752,
+      "total": 1201
+    },
+    "LOC": {
+      "correct": 2842,
+      "total": 2842
+    }
+  },
+  "split_counts": {
+    "train": 2507,
+    "val": 627
+  }
+}
