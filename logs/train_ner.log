@@ -1,18 +1,896 @@
-2025-06-22 18:08:25,371 - __main__ - INFO - Loading training and validation data...
-2025-06-22 18:08:25,393 - __main__ - INFO - Loaded 0 training and 0 validation examples
-2025-06-22 18:08:39,047 - __main__ - ERROR - Error during training: 
-AutoModelForTokenClassification requires the PyTorch library but it was not found in your environment. Checkout the instructions on the
-installation page: https://pytorch.org/get-started/locally/ and follow the ones that match your environment.
-Please note that you may need to restart your runtime after installation.
+2025-06-23 03:16:09,645 - __main__ - INFO - Loaded 2532 training and 634 validation examples
+2025-06-23 03:16:09,658 - __main__ - INFO - Converting spans to BIO tags...
+2025-06-23 03:16:09,676 - __main__ - INFO - Loading tokenizer...
+2025-06-23 03:16:12,420 - __main__ - INFO - Tokenizing dataset...
+2025-06-23 03:16:13,174 - __main__ - INFO - Loading model...
+2025-06-23 03:16:14,274 - __main__ - ERROR - Error during training: --load_best_model_at_end requires the save and eval strategy to match, but found
+- Evaluation strategy: steps
+- Save strategy: epoch
 Traceback (most recent call last):
-  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 170, in train
-    model = AutoModelForTokenClassification.from_pretrained(
-  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\utils\import_utils.py", line 1885, in __getattribute__
-    requires_backends(cls, cls._backends)
-  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\utils\import_utils.py", line 1871, in requires_backends
-    raise ImportError("".join(failed))
-ImportError: 
-AutoModelForTokenClassification requires the PyTorch library but it was not found in your environment. Checkout the instructions on the
-installation page: https://pytorch.org/get-started/locally/ and follow the ones that match your environment.
-Please note that you may need to restart your runtime after installation.
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 209, in train
+    training_args = TrainingArguments(
+  File "<string>", line 131, in __init__
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\training_args.py", line 1630, in __post_init__
+    raise ValueError(
+ValueError: --load_best_model_at_end requires the save and eval strategy to match, but found
+- Evaluation strategy: steps
+- Save strategy: epoch
+2025-06-23 03:17:04,906 - __main__ - INFO - Loaded 2532 training and 634 validation examples
+2025-06-23 03:17:04,906 - __main__ - INFO - Converting spans to BIO tags...
+2025-06-23 03:17:04,922 - __main__ - INFO - Loading tokenizer...
+2025-06-23 03:17:07,496 - __main__ - INFO - Tokenizing dataset...
+2025-06-23 03:17:07,606 - __main__ - INFO - Loading model...
+2025-06-23 03:17:08,379 - __main__ - ERROR - Error during training: --load_best_model_at_end requires the save and eval strategy to match, but found
+- Evaluation strategy: steps
+- Save strategy: epoch
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 209, in train
+    training_args = TrainingArguments(
+  File "<string>", line 131, in __init__
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\training_args.py", line 1630, in __post_init__
+    raise ValueError(
+ValueError: --load_best_model_at_end requires the save and eval strategy to match, but found
+- Evaluation strategy: steps
+- Save strategy: epoch
+2025-06-23 03:21:00,759 - __main__ - INFO - Loaded 2532 training and 634 validation examples
+2025-06-23 03:21:00,759 - __main__ - INFO - Converting spans to BIO tags...
+2025-06-23 03:21:00,759 - __main__ - INFO - Loading tokenizer...
+2025-06-23 03:21:10,501 - __main__ - INFO - Tokenizing dataset...
+2025-06-23 03:21:13,608 - __main__ - INFO - Loading model...
+2025-06-23 03:21:14,374 - __main__ - INFO - Starting training...
+2025-06-23 05:51:30,245 - __main__ - ERROR - Error during training: 'accuracy'
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 241, in train
+    trainer.train()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\trainer.py", line 2240, in train
+    return inner_training_loop(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\trainer.py", line 2656, in _inner_training_loop
+    self._maybe_log_save_evaluate(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\trainer.py", line 3095, in _maybe_log_save_evaluate
+    metrics = self._evaluate(trial, ignore_keys_for_eval)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\trainer.py", line 3044, in _evaluate
+    metrics = self.evaluate(ignore_keys=ignore_keys_for_eval)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\trainer.py", line 4173, in evaluate
+    output = eval_loop(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\trainer.py", line 4463, in evaluation_loop
+    metrics = self.compute_metrics(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 163, in compute_metrics
+    "accuracy": results["accuracy"],
+KeyError: 'accuracy'
+2025-06-23 07:29:30,183 - __main__ - INFO - Loaded 2532 training and 634 validation examples
+2025-06-23 07:29:30,199 - __main__ - INFO - Converting spans to BIO tags...
+2025-06-23 07:29:30,263 - __main__ - INFO - Loading tokenizer...
+2025-06-23 07:29:34,681 - __main__ - INFO - Tokenizing dataset...
+2025-06-23 07:29:36,463 - __main__ - INFO - Loading model...
+2025-06-23 07:29:39,537 - __main__ - ERROR - Error during training: __init__() got an unexpected keyword argument 'evaluation_strategy'
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 216, in train
+    training_args = TrainingArguments(
+TypeError: __init__() got an unexpected keyword argument 'evaluation_strategy'
+2025-06-23 07:49:13,497 - __main__ - INFO - Loaded 2532 training and 634 validation examples
+2025-06-23 07:49:13,497 - __main__ - INFO - Converting spans to BIO tags...
+2025-06-23 07:49:13,528 - __main__ - INFO - Loading tokenizer...
+2025-06-23 07:49:17,220 - __main__ - INFO - Tokenizing dataset...
+2025-06-23 07:49:17,475 - __main__ - INFO - Loading model...
+2025-06-23 07:49:19,228 - __main__ - INFO - Starting training...
+2025-06-24 05:08:10,683 - __main__ - INFO - Loaded 320 training and 80 validation examples
+2025-06-24 05:08:10,683 - __main__ - INFO - Loading tokenizer...
+2025-06-24 05:08:25,512 - __main__ - INFO - Tokenizing dataset...
+2025-06-24 05:08:26,059 - __main__ - INFO - Loading model...
+2025-06-24 05:08:27,575 - __main__ - INFO - Starting training...
+2025-06-24 06:08:16,822 - __main__ - INFO - Training completed and model saved
+2025-06-24 06:08:16,947 - __main__ - INFO - Evaluating on validation set...
+2025-06-24 06:08:46,527 - __main__ - INFO - Final evaluation results: {'eval_loss': 0.16859543323516846, 'eval_precision': 0.0, 'eval_recall': 0.0, 'eval_f1': 0.0, 'eval_runtime': 29.4861, 'eval_samples_per_second': 2.713, 'eval_steps_per_second': 0.339, 'epoch': 3.0}
+2025-06-24 07:54:33,598 - __main__ - INFO - Loaded 320 training and 80 validation examples
+2025-06-24 07:54:33,723 - __main__ - INFO - Label distribution analysis:
+2025-06-24 07:54:33,723 - __main__ - INFO - O: 10194 (3185.62%)
+2025-06-24 07:54:33,723 - __main__ - INFO - B-PRICE: 27 (8.44%)
+2025-06-24 07:54:33,723 - __main__ - INFO - I-PRICE: 27 (8.44%)
+2025-06-24 07:54:33,723 - __main__ - INFO - B-PRODUCT: 373 (116.56%)
+2025-06-24 07:54:33,723 - __main__ - INFO - Initializing tokenizer...
+2025-06-24 07:54:37,286 - __main__ - INFO - Tokenizing dataset...
+2025-06-24 07:54:37,411 - __main__ - ERROR - Training failed: 'labels'
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 241, in train
+    tokenized_dataset = dataset.map(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\datasets\dataset_dict.py", line 944, in map
+    dataset_dict[split] = dataset.map(
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\datasets\arrow_dataset.py", line 557, in wrapper
+    out: Union["Dataset", "DatasetDict"] = func(self, *args, **kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\datasets\arrow_dataset.py", line 3079, in map
+    for rank, done, content in Dataset._map_single(**dataset_kwargs):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\datasets\arrow_dataset.py", line 3525, in _map_single
+    for i, batch in iter_outputs(shard_iterable):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\datasets\arrow_dataset.py", line 3475, in iter_outputs
+    yield i, apply_function(example, i, offset=offset)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\datasets\arrow_dataset.py", line 3398, in apply_function
+    processed_inputs = function(*fn_args, *additional_args, **fn_kwargs)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 242, in <lambda>
+    lambda x: tokenize_and_align_labels(x, tokenizer),
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 180, in tokenize_and_align_labels
+    tokenized_inputs["labels"].append(label_ids)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\tokenization_utils_base.py", line 272, in __getitem__
+    return self.data[item]
+KeyError: 'labels'
+2025-06-24 08:00:48,091 - __main__ - INFO - Loaded 320 training and 80 validation examples
+2025-06-24 08:00:48,185 - __main__ - INFO - Label distribution analysis:
+2025-06-24 08:00:48,185 - __main__ - INFO - O: 10194 (3185.62%)
+2025-06-24 08:00:48,185 - __main__ - INFO - B-PRICE: 27 (8.44%)
+2025-06-24 08:00:48,185 - __main__ - INFO - I-PRICE: 27 (8.44%)
+2025-06-24 08:00:48,185 - __main__ - INFO - B-PRODUCT: 373 (116.56%)
+2025-06-24 08:00:48,185 - __main__ - INFO - Initializing tokenizer...
+2025-06-24 08:01:03,030 - __main__ - INFO - Tokenizing dataset...
+2025-06-24 08:01:03,733 - __main__ - INFO - Initializing model...
+2025-06-24 08:01:05,405 - __main__ - ERROR - Training failed: __init__() got an unexpected keyword argument 'evaluation_strategy'
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 262, in train
+    training_args = TrainingArguments(
+TypeError: __init__() got an unexpected keyword argument 'evaluation_strategy'
+2025-06-24 08:01:53,801 - __main__ - INFO - Loaded 320 training and 80 validation examples
+2025-06-24 08:01:53,895 - __main__ - INFO - Label distribution analysis:
+2025-06-24 08:01:53,895 - __main__ - INFO - O: 10194 (3185.62%)
+2025-06-24 08:01:53,895 - __main__ - INFO - B-PRICE: 27 (8.44%)
+2025-06-24 08:01:53,895 - __main__ - INFO - I-PRICE: 27 (8.44%)
+2025-06-24 08:01:53,895 - __main__ - INFO - B-PRODUCT: 373 (116.56%)
+2025-06-24 08:01:53,895 - __main__ - INFO - Initializing tokenizer...
+2025-06-24 08:01:57,177 - __main__ - INFO - Tokenizing dataset...
+2025-06-24 08:01:57,646 - __main__ - INFO - Initializing model...
+2025-06-24 08:01:58,615 - __main__ - ERROR - Training failed: __init__() got an unexpected keyword argument 'evaluation_strategy'
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 262, in train
+    training_args = TrainingArguments(
+TypeError: __init__() got an unexpected keyword argument 'evaluation_strategy'
+2025-06-24 08:05:01,499 - __main__ - INFO - Loaded 320 training and 80 validation examples
+2025-06-24 08:05:01,577 - __main__ - INFO - Label distribution analysis:
+2025-06-24 08:05:01,577 - __main__ - INFO - O: 10194 (3185.62%)
+2025-06-24 08:05:01,577 - __main__ - INFO - B-PRICE: 27 (8.44%)
+2025-06-24 08:05:01,577 - __main__ - INFO - I-PRICE: 27 (8.44%)
+2025-06-24 08:05:01,577 - __main__ - INFO - B-PRODUCT: 373 (116.56%)
+2025-06-24 08:05:01,577 - __main__ - INFO - Initializing tokenizer...
+2025-06-24 08:05:05,327 - __main__ - INFO - Tokenizing dataset...
+2025-06-24 08:05:05,827 - __main__ - INFO - Initializing model...
+2025-06-24 08:05:06,999 - __main__ - ERROR - Training failed: __init__() got an unexpected keyword argument 'evaluation_strategy'
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 262, in train
+    training_args = TrainingArguments(
+TypeError: __init__() got an unexpected keyword argument 'evaluation_strategy'
+2025-06-24 08:05:38,365 - __main__ - INFO - Loaded 320 training and 80 validation examples
+2025-06-24 08:05:38,459 - __main__ - INFO - Label distribution analysis:
+2025-06-24 08:05:38,459 - __main__ - INFO - O: 10194 (3185.62%)
+2025-06-24 08:05:38,459 - __main__ - INFO - B-PRICE: 27 (8.44%)
+2025-06-24 08:05:38,459 - __main__ - INFO - I-PRICE: 27 (8.44%)
+2025-06-24 08:05:38,459 - __main__ - INFO - B-PRODUCT: 373 (116.56%)
+2025-06-24 08:05:38,459 - __main__ - INFO - Initializing tokenizer...
+2025-06-24 08:05:41,834 - __main__ - INFO - Tokenizing dataset...
+2025-06-24 08:05:42,272 - __main__ - INFO - Initializing model...
+2025-06-24 08:05:43,397 - __main__ - ERROR - Training failed: __init__() got an unexpected keyword argument 'evaluation_strategy'
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 262, in train
+    training_args = TrainingArguments(
+TypeError: __init__() got an unexpected keyword argument 'evaluation_strategy'
+2025-06-24 08:07:46,438 - __main__ - INFO - Loaded 320 training and 80 validation examples
+2025-06-24 08:07:46,532 - __main__ - INFO - Label distribution analysis:
+2025-06-24 08:07:46,532 - __main__ - INFO - O: 10194 (3185.62%)
+2025-06-24 08:07:46,532 - __main__ - INFO - B-PRICE: 27 (8.44%)
+2025-06-24 08:07:46,532 - __main__ - INFO - I-PRICE: 27 (8.44%)
+2025-06-24 08:07:46,532 - __main__ - INFO - B-PRODUCT: 373 (116.56%)
+2025-06-24 08:07:46,532 - __main__ - INFO - Initializing tokenizer...
+2025-06-24 08:07:49,798 - __main__ - INFO - Tokenizing dataset...
+2025-06-24 08:07:50,267 - __main__ - INFO - Initializing model...
+2025-06-24 08:07:51,345 - __main__ - ERROR - Training failed: --load_best_model_at_end requires the save and eval strategy to match, but found
+- Evaluation strategy: no
+- Save strategy: steps
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 263, in train
+    training_args = TrainingArguments(
+  File "<string>", line 131, in __init__
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\training_args.py", line 1630, in __post_init__
+    raise ValueError(
+ValueError: --load_best_model_at_end requires the save and eval strategy to match, but found
+- Evaluation strategy: no
+- Save strategy: steps
+2025-06-24 08:10:20,432 - __main__ - INFO - Loaded 320 training and 80 validation examples
+2025-06-24 08:10:20,510 - __main__ - INFO - Label distribution analysis:
+2025-06-24 08:10:20,510 - __main__ - INFO - O: 10194 (3185.62%)
+2025-06-24 08:10:20,510 - __main__ - INFO - B-PRICE: 27 (8.44%)
+2025-06-24 08:10:20,510 - __main__ - INFO - I-PRICE: 27 (8.44%)
+2025-06-24 08:10:20,510 - __main__ - INFO - B-PRODUCT: 373 (116.56%)
+2025-06-24 08:10:20,510 - __main__ - INFO - Initializing tokenizer...
+2025-06-24 08:10:23,995 - __main__ - INFO - Tokenizing dataset...
+2025-06-24 08:10:24,448 - __main__ - INFO - Initializing model...
+2025-06-24 08:10:25,480 - __main__ - ERROR - Training failed: __init__() got an unexpected keyword argument 'evaluation_strategy'
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 263, in train
+    training_args = TrainingArguments(
+TypeError: __init__() got an unexpected keyword argument 'evaluation_strategy'
+2025-06-24 08:11:40,369 - __main__ - INFO - Loaded 320 training and 80 validation examples
+2025-06-24 08:11:40,478 - __main__ - INFO - Label distribution analysis:
+2025-06-24 08:11:40,478 - __main__ - INFO - O: 10194 (3185.62%)
+2025-06-24 08:11:40,478 - __main__ - INFO - B-PRICE: 27 (8.44%)
+2025-06-24 08:11:40,478 - __main__ - INFO - I-PRICE: 27 (8.44%)
+2025-06-24 08:11:40,478 - __main__ - INFO - B-PRODUCT: 373 (116.56%)
+2025-06-24 08:11:40,478 - __main__ - INFO - Initializing tokenizer...
+2025-06-24 08:11:43,728 - __main__ - INFO - Tokenizing dataset...
+2025-06-24 08:11:44,197 - __main__ - INFO - Initializing model...
+2025-06-24 08:11:45,213 - __main__ - ERROR - Training failed: __init__() got an unexpected keyword argument 'evaluation_strategy'
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 263, in train
+    training_args = TrainingArguments(
+TypeError: __init__() got an unexpected keyword argument 'evaluation_strategy'
+2025-06-24 08:14:49,203 - __main__ - INFO - Loaded 320 training and 80 validation examples
+2025-06-24 08:14:49,281 - __main__ - INFO - Label distribution analysis:
+2025-06-24 08:14:49,281 - __main__ - INFO - O: 10194 (3185.62%)
+2025-06-24 08:14:49,281 - __main__ - INFO - B-PRICE: 27 (8.44%)
+2025-06-24 08:14:49,281 - __main__ - INFO - I-PRICE: 27 (8.44%)
+2025-06-24 08:14:49,281 - __main__ - INFO - B-PRODUCT: 373 (116.56%)
+2025-06-24 08:14:49,296 - __main__ - INFO - Initializing tokenizer...
+2025-06-24 08:14:55,109 - __main__ - INFO - Tokenizing dataset...
+2025-06-24 08:14:55,687 - __main__ - INFO - Initializing model...
+2025-06-24 08:14:56,797 - __main__ - ERROR - Training failed: --load_best_model_at_end requires the save and eval strategy to match, but found
+- Evaluation strategy: no
+- Save strategy: steps
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 263, in train
+    training_args = TrainingArguments(
+  File "<string>", line 131, in __init__
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\training_args.py", line 1630, in __post_init__
+    raise ValueError(
+ValueError: --load_best_model_at_end requires the save and eval strategy to match, but found
+- Evaluation strategy: no
+- Save strategy: steps
+2025-06-24 08:18:36,498 - __main__ - INFO - Running with transformers v4.52.4
+2025-06-24 08:18:36,498 - __main__ - INFO - PyTorch version: 2.7.1+cpu
+2025-06-24 08:18:36,498 - __main__ - INFO - CUDA available: False
+2025-06-24 08:18:36,498 - __main__ - INFO - Loading and validating data...
+2025-06-24 08:18:36,498 - __main__ - ERROR - Training failed: name 'load_data' is not defined
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 165, in train
+    dataset = load_data()
+NameError: name 'load_data' is not defined
+2025-06-24 08:18:36,498 - __main__ - CRITICAL - Critical error in main execution: Training failed: name 'load_data' is not defined
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 165, in train
+    dataset = load_data()
+NameError: name 'load_data' is not defined
 
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 250, in <module>
+    train()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 238, in train
+    raise RuntimeError(f"Training failed: {str(e)}") from e
+RuntimeError: Training failed: name 'load_data' is not defined
+2025-06-24 08:22:10,052 - __main__ - INFO - Running with transformers v4.52.4
+2025-06-24 08:22:10,052 - __main__ - INFO - PyTorch version: 2.7.1+cpu
+2025-06-24 08:22:10,052 - __main__ - INFO - CUDA available: False
+2025-06-24 08:22:10,052 - __main__ - INFO - Loading and validating data...
+2025-06-24 08:22:10,115 - __main__ - INFO - Loaded 320 training and 80 validation examples
+2025-06-24 08:22:10,208 - __main__ - INFO - Label distribution analysis (token-level):
+2025-06-24 08:22:10,208 - __main__ - INFO - O: 10194 (95.98%)
+2025-06-24 08:22:10,208 - __main__ - INFO - B-PRICE: 27 (0.25%)
+2025-06-24 08:22:10,208 - __main__ - INFO - I-PRICE: 27 (0.25%)
+2025-06-24 08:22:10,208 - __main__ - INFO - B-PRODUCT: 373 (3.51%)
+2025-06-24 08:22:10,208 - __main__ - INFO - Initializing tokenizer...
+2025-06-24 08:22:14,490 - __main__ - INFO - Tokenizing dataset...
+2025-06-24 08:22:15,006 - __main__ - INFO - Initializing model...
+2025-06-24 08:22:16,678 - __main__ - INFO - Configuring training arguments...
+2025-06-24 08:22:16,694 - __main__ - ERROR - Training failed: --load_best_model_at_end requires the save and eval strategy to match, but found
+- Evaluation strategy: no
+- Save strategy: steps
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 337, in train
+    training_args = get_training_args()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 249, in get_training_args
+    return TrainingArguments(
+  File "<string>", line 131, in __init__
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\training_args.py", line 1630, in __post_init__
+    raise ValueError(
+ValueError: --load_best_model_at_end requires the save and eval strategy to match, but found
+- Evaluation strategy: no
+- Save strategy: steps
+2025-06-24 08:22:17,287 - __main__ - CRITICAL - Critical error in main execution: Training failed: --load_best_model_at_end requires the save and eval strategy to match, but found
+- Evaluation strategy: no
+- Save strategy: steps
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 337, in train
+    training_args = get_training_args()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 249, in get_training_args
+    return TrainingArguments(
+  File "<string>", line 131, in __init__
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\training_args.py", line 1630, in __post_init__
+    raise ValueError(
+ValueError: --load_best_model_at_end requires the save and eval strategy to match, but found
+- Evaluation strategy: no
+- Save strategy: steps
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 391, in <module>
+    train()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 379, in train
+    raise RuntimeError(f"Training failed: {str(e)}") from e
+RuntimeError: Training failed: --load_best_model_at_end requires the save and eval strategy to match, but found
+- Evaluation strategy: no
+- Save strategy: steps
+2025-06-24 08:29:24,683 - __main__ - INFO - Running with transformers v4.52.4
+2025-06-24 08:29:24,683 - __main__ - INFO - PyTorch version: 2.7.1+cpu
+2025-06-24 08:29:24,683 - __main__ - INFO - CUDA available: False
+2025-06-24 08:29:24,683 - __main__ - INFO - Loading and validating data...
+2025-06-24 08:29:24,730 - __main__ - INFO - Loaded 320 training and 80 validation examples
+2025-06-24 08:29:24,808 - __main__ - INFO - Label distribution analysis (token-level):
+2025-06-24 08:29:24,808 - __main__ - INFO - O: 10194 (95.98%)
+2025-06-24 08:29:24,808 - __main__ - INFO - B-PRICE: 27 (0.25%)
+2025-06-24 08:29:24,808 - __main__ - INFO - I-PRICE: 27 (0.25%)
+2025-06-24 08:29:24,808 - __main__ - INFO - B-PRODUCT: 373 (3.51%)
+2025-06-24 08:29:24,808 - __main__ - INFO - Initializing tokenizer...
+2025-06-24 08:29:39,340 - __main__ - INFO - Tokenizing dataset...
+2025-06-24 08:29:39,793 - __main__ - INFO - Initializing model...
+2025-06-24 08:29:40,856 - __main__ - INFO - Configuring training arguments...
+2025-06-24 08:29:41,231 - __main__ - ERROR - Training failed: __init__() got an unexpected keyword argument 'evaluation_strategy'
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 337, in train
+    training_args = get_training_args()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 249, in get_training_args
+    return TrainingArguments(
+TypeError: __init__() got an unexpected keyword argument 'evaluation_strategy'
+2025-06-24 08:29:41,231 - __main__ - CRITICAL - Critical error in main execution: Training failed: __init__() got an unexpected keyword argument 'evaluation_strategy'
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 337, in train
+    training_args = get_training_args()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 249, in get_training_args
+    return TrainingArguments(
+TypeError: __init__() got an unexpected keyword argument 'evaluation_strategy'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 391, in <module>
+    train()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 379, in train
+    raise RuntimeError(f"Training failed: {str(e)}") from e
+RuntimeError: Training failed: __init__() got an unexpected keyword argument 'evaluation_strategy'
+2025-06-24 08:34:24,922 - __main__ - INFO - Running with transformers v4.52.4
+2025-06-24 08:34:24,922 - __main__ - INFO - PyTorch version: 2.7.1+cpu
+2025-06-24 08:34:24,922 - __main__ - INFO - CUDA available: False
+2025-06-24 08:34:24,922 - __main__ - INFO - Loading and validating data...
+2025-06-24 08:34:24,969 - __main__ - INFO - Loaded 320 training and 80 validation examples
+2025-06-24 08:34:25,047 - __main__ - INFO - Label distribution analysis (token-level):
+2025-06-24 08:34:25,047 - __main__ - INFO - O: 10194 (95.98%)
+2025-06-24 08:34:25,047 - __main__ - INFO - B-PRICE: 27 (0.25%)
+2025-06-24 08:34:25,047 - __main__ - INFO - I-PRICE: 27 (0.25%)
+2025-06-24 08:34:25,047 - __main__ - INFO - B-PRODUCT: 373 (3.51%)
+2025-06-24 08:34:25,047 - __main__ - INFO - Initializing tokenizer...
+2025-06-24 08:34:39,516 - __main__ - INFO - Tokenizing dataset...
+2025-06-24 08:34:39,969 - __main__ - INFO - Initializing model...
+2025-06-24 08:34:41,062 - __main__ - INFO - Configuring training arguments...
+2025-06-24 08:34:41,062 - __main__ - ERROR - Training failed: --load_best_model_at_end requires the save and eval strategy to match, but found
+- Evaluation strategy: no
+- Save strategy: steps
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 244, in get_training_args
+    return TrainingArguments(evaluation_strategy="steps", **args)
+TypeError: __init__() got an unexpected keyword argument 'evaluation_strategy'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 313, in train
+    training_args = get_training_args()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 246, in get_training_args
+    return TrainingArguments(**args)
+  File "<string>", line 131, in __init__
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\training_args.py", line 1630, in __post_init__
+    raise ValueError(
+ValueError: --load_best_model_at_end requires the save and eval strategy to match, but found
+- Evaluation strategy: no
+- Save strategy: steps
+2025-06-24 08:34:41,062 - __main__ - CRITICAL - Critical error in main execution: Training failed: --load_best_model_at_end requires the save and eval strategy to match, but found
+- Evaluation strategy: no
+- Save strategy: steps
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 244, in get_training_args
+    return TrainingArguments(evaluation_strategy="steps", **args)
+TypeError: __init__() got an unexpected keyword argument 'evaluation_strategy'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 313, in train
+    training_args = get_training_args()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 246, in get_training_args
+    return TrainingArguments(**args)
+  File "<string>", line 131, in __init__
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\training_args.py", line 1630, in __post_init__
+    raise ValueError(
+ValueError: --load_best_model_at_end requires the save and eval strategy to match, but found
+- Evaluation strategy: no
+- Save strategy: steps
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 367, in <module>
+    train()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 355, in train
+    raise RuntimeError(f"Training failed: {str(e)}") from e
+RuntimeError: Training failed: --load_best_model_at_end requires the save and eval strategy to match, but found
+- Evaluation strategy: no
+- Save strategy: steps
+2025-06-24 08:40:08,679 - __main__ - INFO - Running with transformers v4.52.4
+2025-06-24 08:40:08,679 - __main__ - INFO - PyTorch version: 2.7.1+cpu
+2025-06-24 08:40:08,679 - __main__ - INFO - CUDA available: False
+2025-06-24 08:40:08,679 - __main__ - INFO - Loading and validating data...
+2025-06-24 08:40:08,741 - __main__ - INFO - Loaded 320 training and 80 validation examples
+2025-06-24 08:40:08,835 - __main__ - INFO - Label distribution analysis (token-level):
+2025-06-24 08:40:08,835 - __main__ - INFO - O: 10194 (95.98%)
+2025-06-24 08:40:08,835 - __main__ - INFO - B-PRICE: 27 (0.25%)
+2025-06-24 08:40:08,835 - __main__ - INFO - I-PRICE: 27 (0.25%)
+2025-06-24 08:40:08,835 - __main__ - INFO - B-PRODUCT: 373 (3.51%)
+2025-06-24 08:40:08,835 - __main__ - INFO - Initializing tokenizer...
+2025-06-24 08:40:12,758 - __main__ - INFO - Tokenizing dataset...
+2025-06-24 08:40:13,258 - __main__ - INFO - Initializing model...
+2025-06-24 08:40:14,461 - __main__ - INFO - Configuring training arguments...
+2025-06-24 08:40:14,461 - __main__ - ERROR - Training failed: __init__() got an unexpected keyword argument 'evaluate_during_training'
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 315, in train
+    training_args = get_training_args()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 245, in get_training_args
+    return TrainingArguments(**args)
+TypeError: __init__() got an unexpected keyword argument 'evaluate_during_training'
+2025-06-24 08:40:14,461 - __main__ - CRITICAL - Critical error in main execution: Training failed: __init__() got an unexpected keyword argument 'evaluate_during_training'
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 315, in train
+    training_args = get_training_args()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 245, in get_training_args
+    return TrainingArguments(**args)
+TypeError: __init__() got an unexpected keyword argument 'evaluate_during_training'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 369, in <module>
+    train()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 357, in train
+    raise RuntimeError(f"Training failed: {str(e)}") from e
+RuntimeError: Training failed: __init__() got an unexpected keyword argument 'evaluate_during_training'
+2025-06-24 08:41:39,638 - __main__ - INFO - Running with transformers v4.52.4
+2025-06-24 08:41:39,638 - __main__ - INFO - PyTorch version: 2.7.1+cpu
+2025-06-24 08:41:39,638 - __main__ - INFO - CUDA available: False
+2025-06-24 08:41:39,638 - __main__ - INFO - Loading and validating data...
+2025-06-24 08:41:39,701 - __main__ - INFO - Loaded 320 training and 80 validation examples
+2025-06-24 08:41:39,795 - __main__ - INFO - Label distribution analysis (token-level):
+2025-06-24 08:41:39,795 - __main__ - INFO - O: 10194 (95.98%)
+2025-06-24 08:41:39,795 - __main__ - INFO - B-PRICE: 27 (0.25%)
+2025-06-24 08:41:39,795 - __main__ - INFO - I-PRICE: 27 (0.25%)
+2025-06-24 08:41:39,795 - __main__ - INFO - B-PRODUCT: 373 (3.51%)
+2025-06-24 08:41:39,795 - __main__ - INFO - Initializing tokenizer...
+2025-06-24 08:41:43,248 - __main__ - INFO - Tokenizing dataset...
+2025-06-24 08:41:43,685 - __main__ - INFO - Initializing model...
+2025-06-24 08:41:44,748 - __main__ - INFO - Configuring training arguments...
+2025-06-24 08:41:44,748 - __main__ - ERROR - Training failed: --load_best_model_at_end requires the save and eval strategy to match, but found
+- Evaluation strategy: no
+- Save strategy: steps
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 307, in train
+    training_args = get_training_args()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 219, in get_training_args
+    return TrainingArguments(
+  File "<string>", line 131, in __init__
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\training_args.py", line 1630, in __post_init__
+    raise ValueError(
+ValueError: --load_best_model_at_end requires the save and eval strategy to match, but found
+- Evaluation strategy: no
+- Save strategy: steps
+2025-06-24 08:41:44,748 - __main__ - CRITICAL - Critical error in main execution: Training failed: --load_best_model_at_end requires the save and eval strategy to match, but found
+- Evaluation strategy: no
+- Save strategy: steps
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 307, in train
+    training_args = get_training_args()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 219, in get_training_args
+    return TrainingArguments(
+  File "<string>", line 131, in __init__
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\venv\lib\site-packages\transformers\training_args.py", line 1630, in __post_init__
+    raise ValueError(
+ValueError: --load_best_model_at_end requires the save and eval strategy to match, but found
+- Evaluation strategy: no
+- Save strategy: steps
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 361, in <module>
+    train()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 349, in train
+    raise RuntimeError(f"Training failed: {str(e)}") from e
+RuntimeError: Training failed: --load_best_model_at_end requires the save and eval strategy to match, but found
+- Evaluation strategy: no
+- Save strategy: steps
+2025-06-24 08:44:28,549 - __main__ - INFO - Running with transformers v4.52.4
+2025-06-24 08:44:28,550 - __main__ - INFO - PyTorch version: 2.7.1+cpu
+2025-06-24 08:44:28,550 - __main__ - INFO - CUDA available: False
+2025-06-24 08:44:28,550 - __main__ - INFO - Loading and validating data...
+2025-06-24 08:44:28,613 - __main__ - INFO - Loaded 320 training and 80 validation examples
+2025-06-24 08:44:28,711 - __main__ - INFO - Label distribution analysis (token-level):
+2025-06-24 08:44:28,711 - __main__ - INFO - O: 10194 (95.98%)
+2025-06-24 08:44:28,711 - __main__ - INFO - B-PRICE: 27 (0.25%)
+2025-06-24 08:44:28,712 - __main__ - INFO - I-PRICE: 27 (0.25%)
+2025-06-24 08:44:28,712 - __main__ - INFO - B-PRODUCT: 373 (3.51%)
+2025-06-24 08:44:28,712 - __main__ - INFO - Initializing tokenizer...
+2025-06-24 08:44:33,131 - __main__ - INFO - Tokenizing dataset...
+2025-06-24 08:44:33,755 - __main__ - INFO - Initializing model...
+2025-06-24 08:44:35,037 - __main__ - INFO - Configuring training arguments...
+2025-06-24 08:44:35,037 - __main__ - ERROR - Training failed: __init__() got an unexpected keyword argument 'evaluate_during_training'
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 308, in train
+    training_args = get_training_args()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 219, in get_training_args
+    return TrainingArguments(
+TypeError: __init__() got an unexpected keyword argument 'evaluate_during_training'
+2025-06-24 08:44:35,037 - __main__ - CRITICAL - Critical error in main execution: Training failed: __init__() got an unexpected keyword argument 'evaluate_during_training'
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 308, in train
+    training_args = get_training_args()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 219, in get_training_args
+    return TrainingArguments(
+TypeError: __init__() got an unexpected keyword argument 'evaluate_during_training'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 362, in <module>
+    train()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 350, in train
+    raise RuntimeError(f"Training failed: {str(e)}") from e
+RuntimeError: Training failed: __init__() got an unexpected keyword argument 'evaluate_during_training'
+2025-06-24 08:45:30,606 - __main__ - INFO - Running with transformers v4.52.4
+2025-06-24 08:45:30,606 - __main__ - INFO - PyTorch version: 2.7.1+cpu
+2025-06-24 08:45:30,606 - __main__ - INFO - CUDA available: False
+2025-06-24 08:45:30,606 - __main__ - INFO - Loading and validating data...
+2025-06-24 08:45:30,669 - __main__ - INFO - Loaded 320 training and 80 validation examples
+2025-06-24 08:45:30,763 - __main__ - INFO - Label distribution analysis (token-level):
+2025-06-24 08:45:30,763 - __main__ - INFO - O: 10194 (95.98%)
+2025-06-24 08:45:30,763 - __main__ - INFO - B-PRICE: 27 (0.25%)
+2025-06-24 08:45:30,763 - __main__ - INFO - I-PRICE: 27 (0.25%)
+2025-06-24 08:45:30,763 - __main__ - INFO - B-PRODUCT: 373 (3.51%)
+2025-06-24 08:45:30,763 - __main__ - INFO - Initializing tokenizer...
+2025-06-24 08:45:34,419 - __main__ - INFO - Tokenizing dataset...
+2025-06-24 08:45:34,966 - __main__ - INFO - Initializing model...
+2025-06-24 08:45:36,107 - __main__ - INFO - Configuring training arguments...
+2025-06-24 08:45:36,107 - __main__ - ERROR - Training failed: __init__() got an unexpected keyword argument 'evaluate_during_training'
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 303, in train
+    training_args = get_training_args()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 219, in get_training_args
+    return TrainingArguments(
+TypeError: __init__() got an unexpected keyword argument 'evaluate_during_training'
+2025-06-24 08:45:36,107 - __main__ - CRITICAL - Critical error in main execution: Training failed: __init__() got an unexpected keyword argument 'evaluate_during_training'
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 303, in train
+    training_args = get_training_args()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 219, in get_training_args
+    return TrainingArguments(
+TypeError: __init__() got an unexpected keyword argument 'evaluate_during_training'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 357, in <module>
+    train()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 345, in train
+    raise RuntimeError(f"Training failed: {str(e)}") from e
+RuntimeError: Training failed: __init__() got an unexpected keyword argument 'evaluate_during_training'
+2025-06-24 08:49:52,035 - __main__ - INFO - Loaded 320 training and 80 validation examples
+2025-06-24 08:49:52,035 - __main__ - INFO - Loading tokenizer...
+2025-06-24 08:49:55,708 - __main__ - INFO - Tokenizing dataset...
+2025-06-24 08:49:56,255 - __main__ - INFO - Loading model...
+2025-06-24 08:49:57,333 - __main__ - INFO - Starting training...
+2025-06-24 09:04:31,678 - __main__ - INFO - Sample training example:
+2025-06-24 09:04:31,678 - __main__ - INFO - Tags: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O']...
+2025-06-24 09:04:31,741 - __main__ - INFO - Loaded 320 training and 80 validation examples
+2025-06-24 09:04:31,741 - __main__ - INFO - Loading tokenizer...
+2025-06-24 09:04:37,710 - __main__ - INFO - Tokenizing dataset...
+2025-06-24 09:04:38,335 - __main__ - INFO - Sample tokenized example:
+2025-06-24 09:04:38,351 - __main__ - INFO - {'input_ids': [0, 6, 243720, 243720, 27, 31157, 31157, 243720, 243720, 6, 244497, 24624, 3980, 25388, 6, 118280, 3639, 204281, 1437, 175386, 49648, 152806, 62696, 237390, 1437, 4363, 9039, 2202, 30936, 69870, 29597, 54667, 80667, 54164, 6, 246989, 3, 149678, 35648, 6, 245682, 100579, 548, 29831, 13199, 3053, 16863, 548, 222326, 222326, 222326, 6, 248251, 140042, 120242, 6, 245682, 243513, 15755, 4904, 6231, 60014, 9171, 454, 93561, 47227, 454, 4555, 191973, 454, 13357, 2202, 454, 115742, 454, 31531, 5653, 137526, 47885, 5, 159, 8194, 64, 294, 9016, 6, 247440, 247440, 247440, 247440, 6, 244378, 3894, 9550, 89709, 191539, 6, 244378, 3894, 3882, 158332, 161025, 6, 248322, 6, 247746, 3639, 75809, 25561, 13253, 9039, 7872, 6, 244940, 15755, 2934, 169422, 3, 1374, 5709, 33, 85763, 30090, 1374, 5709, 33, 136091, 2], 'attention_mask': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 'labels': [-100, 0, -100, -100, -100, -100, -100, -100, -100, 0, -100, 0, 0, -100, 0, -100, -100, -100, -100, 0, 0, -100, 0, -100, -100, 0, -100, -100, 0, -100, -100, -100, 0, -100, 0, -100, -100, 3, 4, 0, -100, -100, -100, 0, -100, 0, 0, -100, -100, -100, -100, 0, -100, 0, -100, 0, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, -100, 0, 0, -100, 1, -100, -100, -100, -100, 0, -100, -100, -100, -100, 0, -100, 0, -100, -100, -100, 0, -100, 0, -100, -100, -100, 0, -100, 0, -100, -100, -100, -100, 0, -100, -100, 0, -100, -100, 0, -100, -100, 0, -100, -100, -100, -100, 0, -100, -100, -100, -100]}
+2025-06-24 09:04:38,351 - __main__ - INFO - Loading model...
+2025-06-24 09:04:40,867 - __main__ - ERROR - Error during training: __init__() got an unexpected keyword argument 'evaluation_strategy'
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 241, in train
+    training_args = TrainingArguments(
+TypeError: __init__() got an unexpected keyword argument 'evaluation_strategy'
+2025-06-25 03:49:42,798 - __main__ - INFO - Loading and validating dataset...
+2025-06-25 03:49:42,813 - __main__ - INFO - Parsed data\labeled\train.conll: 320 examples, 10941 lines, 320 empty lines, 0 malformed lines
+2025-06-25 03:49:42,813 - __main__ - INFO - Parsed data\labeled\val.conll: 80 examples, 3487 lines, 80 empty lines, 0 malformed lines
+2025-06-25 03:49:42,876 - __main__ - INFO - 
+Dataset Statistics:
+2025-06-25 03:49:42,876 - __main__ - INFO - 
+TRAIN SET:
+2025-06-25 03:49:42,876 - __main__ - INFO - Number of examples: 320
+2025-06-25 03:49:42,985 - __main__ - INFO - Tag distribution:
+2025-06-25 03:49:42,985 - __main__ - INFO - O: 10194 (95.98%)
+2025-06-25 03:49:42,985 - __main__ - INFO - B-PRODUCT: 373 (3.51%)
+2025-06-25 03:49:42,985 - __main__ - INFO - I-PRODUCT: 0 (0.00%)
+2025-06-25 03:49:42,985 - __main__ - INFO - B-PRICE: 27 (0.25%)
+2025-06-25 03:49:42,985 - __main__ - INFO - I-PRICE: 27 (0.25%)
+2025-06-25 03:49:42,985 - __main__ - INFO - B-PHONE: 0 (0.00%)
+2025-06-25 03:49:42,985 - __main__ - INFO - I-PHONE: 0 (0.00%)
+2025-06-25 03:49:43,079 - __main__ - INFO - 
+Sentence length analysis:
+2025-06-25 03:49:43,079 - __main__ - INFO - Min length: 2 tokens
+2025-06-25 03:49:43,079 - __main__ - INFO - Max length: 261 tokens
+2025-06-25 03:49:43,079 - __main__ - INFO - Avg length: 33.2 tokens
+2025-06-25 03:49:43,079 - __main__ - INFO - 
+VAL SET:
+2025-06-25 03:49:43,079 - __main__ - INFO - Number of examples: 80
+2025-06-25 03:49:43,110 - __main__ - INFO - Tag distribution:
+2025-06-25 03:49:43,110 - __main__ - INFO - O: 3271 (96.01%)
+2025-06-25 03:49:43,110 - __main__ - INFO - B-PRODUCT: 124 (3.64%)
+2025-06-25 03:49:43,110 - __main__ - INFO - I-PRODUCT: 0 (0.00%)
+2025-06-25 03:49:43,110 - __main__ - INFO - B-PRICE: 6 (0.18%)
+2025-06-25 03:49:43,110 - __main__ - INFO - I-PRICE: 6 (0.18%)
+2025-06-25 03:49:43,110 - __main__ - INFO - B-PHONE: 0 (0.00%)
+2025-06-25 03:49:43,110 - __main__ - INFO - I-PHONE: 0 (0.00%)
+2025-06-25 03:49:43,173 - __main__ - INFO - 
+Sentence length analysis:
+2025-06-25 03:49:43,204 - __main__ - INFO - Min length: 2 tokens
+2025-06-25 03:49:43,235 - __main__ - INFO - Max length: 293 tokens
+2025-06-25 03:49:43,266 - __main__ - INFO - Avg length: 42.6 tokens
+2025-06-25 03:49:43,266 - __main__ - INFO - Validating dataset...
+2025-06-25 03:49:43,376 - __main__ - INFO - Validated train set: 320 examples, 10621 tokens
+2025-06-25 03:49:43,407 - __main__ - INFO - Validated val set: 80 examples, 3407 tokens
+2025-06-25 03:49:43,407 - __main__ - INFO - Dataset validation passed
+2025-06-25 03:49:43,407 - __main__ - INFO - Successfully loaded 320 training and 80 validation examples
+2025-06-25 03:49:43,423 - __main__ - INFO - Loading tokenizer...
+2025-06-25 03:49:46,969 - __main__ - INFO - Tokenizing dataset...
+2025-06-25 03:49:47,595 - __main__ - INFO - Example of tokenized input:
+2025-06-25 03:49:47,610 - __main__ - INFO - Input IDs length: 128
+2025-06-25 03:49:47,610 - __main__ - INFO - Labels length: 128
+2025-06-25 03:49:47,610 - __main__ - INFO - Original tags: ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'B-PRICE', 'I-PRICE', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'B-PRODUCT', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'B-PRODUCT', 'O', 'O', 'O']
+2025-06-25 03:49:47,610 - __main__ - INFO - Tokenized labels: ['IGNORE', 'O', 'IGNORE', 'IGNORE', 'IGNORE', 'IGNORE', 'IGNORE', 'IGNORE', 'IGNORE', 'O', 'IGNORE', 'O', 'O', 'IGNORE', 'O', 'IGNORE', 'IGNORE', 'IGNORE', 'IGNORE', 'O', 'O', 'IGNORE', 'O', 'IGNORE', 'IGNORE', 'O', 'IGNORE', 'IGNORE', 'O', 'IGNORE', 'IGNORE', 'IGNORE', 'O', 'IGNORE', 'O', 'IGNORE', 'IGNORE', 'B-PRICE', 'I-PRICE', 'O', 'IGNORE', 'IGNORE', 'IGNORE', 'O', 'IGNORE', 'O', 'O', 'IGNORE', 'IGNORE', 'IGNORE', 'IGNORE', 'O', 'IGNORE', 'O', 'IGNORE', 'O', 'IGNORE', 'IGNORE', 'IGNORE', 'IGNORE', 'IGNORE', 'IGNORE', 'IGNORE', 'IGNORE', 'IGNORE', 'IGNORE', 'IGNORE', 'IGNORE', 'IGNORE', 'IGNORE', 'IGNORE', 'IGNORE', 'IGNORE', 'IGNORE', 'IGNORE', 'IGNORE', 'IGNORE', 'O', 'O', 'IGNORE', 'B-PRODUCT', 'I-PRODUCT', 'I-PRODUCT', 'I-PRODUCT', 'I-PRODUCT', 'O', 'IGNORE', 'IGNORE', 'IGNORE', 'IGNORE', 'O', 'IGNORE', 'O', 'IGNORE', 'IGNORE', 'IGNORE', 'O', 'IGNORE', 'O', 'IGNORE', 'IGNORE', 'IGNORE', 'O', 'IGNORE', 'O', 'IGNORE', 'IGNORE', 'IGNORE', 'IGNORE', 'O', 'IGNORE', 'IGNORE', 'O', 'IGNORE', 'IGNORE', 'O', 'IGNORE', 'IGNORE', 'O', 'IGNORE', 'IGNORE', 'IGNORE', 'IGNORE', 'O', 'IGNORE', 'IGNORE', 'IGNORE', 'IGNORE']
+2025-06-25 03:49:47,610 - __main__ - INFO - Loading model...
+2025-06-25 03:49:49,204 - __main__ - ERROR - Error during training: __init__() got an unexpected keyword argument 'evaluation_strategy'
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 344, in train
+    training_args = TrainingArguments(
+TypeError: __init__() got an unexpected keyword argument 'evaluation_strategy'
+2025-06-25 03:54:04,695 - __main__ - INFO - Loading and validating dataset...
+2025-06-25 03:54:04,711 - __main__ - INFO - Parsed data\labeled\train.conll: 320 examples, 10941 lines, 320 empty lines, 0 malformed lines
+2025-06-25 03:54:04,711 - __main__ - INFO - Parsed data\labeled\val.conll: 80 examples, 3487 lines, 80 empty lines, 0 malformed lines
+2025-06-25 03:54:04,758 - __main__ - INFO - 
+Dataset Statistics:
+2025-06-25 03:54:04,758 - __main__ - INFO - 
+TRAIN SET:
+2025-06-25 03:54:04,758 - __main__ - INFO - Number of examples: 320
+2025-06-25 03:54:04,867 - __main__ - INFO - Tag distribution:
+2025-06-25 03:54:04,867 - __main__ - INFO - O: 10194 (95.98%)
+2025-06-25 03:54:04,867 - __main__ - INFO - B-PRODUCT: 373 (3.51%)
+2025-06-25 03:54:04,867 - __main__ - INFO - I-PRODUCT: 0 (0.00%)
+2025-06-25 03:54:04,867 - __main__ - INFO - B-PRICE: 27 (0.25%)
+2025-06-25 03:54:04,867 - __main__ - INFO - I-PRICE: 27 (0.25%)
+2025-06-25 03:54:04,867 - __main__ - INFO - B-PHONE: 0 (0.00%)
+2025-06-25 03:54:04,867 - __main__ - INFO - I-PHONE: 0 (0.00%)
+2025-06-25 03:54:04,945 - __main__ - INFO - 
+Sentence length analysis:
+2025-06-25 03:54:04,945 - __main__ - INFO - Min length: 2 tokens
+2025-06-25 03:54:04,945 - __main__ - INFO - Max length: 261 tokens
+2025-06-25 03:54:04,961 - __main__ - INFO - Avg length: 33.2 tokens
+2025-06-25 03:54:04,961 - __main__ - INFO - 
+VAL SET:
+2025-06-25 03:54:04,961 - __main__ - INFO - Number of examples: 80
+2025-06-25 03:54:04,992 - __main__ - INFO - Tag distribution:
+2025-06-25 03:54:04,992 - __main__ - INFO - O: 3271 (96.01%)
+2025-06-25 03:54:04,992 - __main__ - INFO - B-PRODUCT: 124 (3.64%)
+2025-06-25 03:54:04,992 - __main__ - INFO - I-PRODUCT: 0 (0.00%)
+2025-06-25 03:54:04,992 - __main__ - INFO - B-PRICE: 6 (0.18%)
+2025-06-25 03:54:04,992 - __main__ - INFO - I-PRICE: 6 (0.18%)
+2025-06-25 03:54:04,992 - __main__ - INFO - B-PHONE: 0 (0.00%)
+2025-06-25 03:54:04,992 - __main__ - INFO - I-PHONE: 0 (0.00%)
+2025-06-25 03:54:05,023 - __main__ - INFO - 
+Sentence length analysis:
+2025-06-25 03:54:05,023 - __main__ - INFO - Min length: 2 tokens
+2025-06-25 03:54:05,023 - __main__ - INFO - Max length: 293 tokens
+2025-06-25 03:54:05,023 - __main__ - INFO - Avg length: 42.6 tokens
+2025-06-25 03:54:05,023 - __main__ - INFO - Validating dataset...
+2025-06-25 03:54:05,148 - __main__ - INFO - Validated train set: 320 examples, 10621 tokens
+2025-06-25 03:54:05,164 - __main__ - INFO - Validated val set: 80 examples, 3407 tokens
+2025-06-25 03:54:05,164 - __main__ - INFO - Dataset validation passed
+2025-06-25 03:54:05,164 - __main__ - INFO - Successfully loaded 320 training and 80 validation examples
+2025-06-25 03:54:05,164 - __main__ - INFO - Loading tokenizer...
+2025-06-25 03:54:09,179 - __main__ - INFO - Tokenizing dataset...
+2025-06-25 03:54:09,664 - __main__ - INFO - Example of tokenized input:
+2025-06-25 03:54:09,664 - __main__ - INFO - Input IDs length: 128
+2025-06-25 03:54:09,664 - __main__ - INFO - Labels length: 128
+2025-06-25 03:54:09,664 - __main__ - INFO - Loading model...
+2025-06-25 03:54:10,883 - __main__ - INFO - Starting training...
+2025-06-25 04:45:56,488 - __main__ - INFO - Saving model and artifacts...
+2025-06-25 04:46:10,770 - __main__ - INFO - Evaluating on validation set...
+2025-06-25 04:46:40,838 - __main__ - INFO - Final evaluation results:
+2025-06-25 04:46:40,838 - __main__ - INFO - eval_loss: 0.4711454510688782
+2025-06-25 04:46:40,838 - __main__ - INFO - eval_precision: 0.0
+2025-06-25 04:46:40,838 - __main__ - INFO - eval_recall: 0.0
+2025-06-25 04:46:40,853 - __main__ - INFO - eval_f1: 0.0
+2025-06-25 04:46:40,853 - __main__ - INFO - eval_runtime: 29.9737
+2025-06-25 04:46:40,853 - __main__ - INFO - eval_samples_per_second: 2.669
+2025-06-25 04:46:40,853 - __main__ - INFO - eval_steps_per_second: 0.334
+2025-06-25 04:46:40,853 - __main__ - INFO - epoch: 3.0
+2025-06-25 04:46:40,853 - __main__ - INFO - Training completed successfully
+2025-06-26 01:48:22,382 - __main__ - INFO - Loading and validating dataset...
+2025-06-26 01:48:22,382 - __main__ - ERROR - Error parsing data\labeled\train.conll at line 81: Invalid tag 'B-LOC' found in data. Allowed tags: ['O', 'B-PRODUCT', 'I-PRODUCT', 'B-PRICE', 'I-PRICE', 'B-PHONE', 'I-PHONE']
+2025-06-26 01:48:22,382 - __main__ - ERROR - Error loading data: Invalid tag 'B-LOC' found in data. Allowed tags: ['O', 'B-PRODUCT', 'I-PRODUCT', 'B-PRICE', 'I-PRICE', 'B-PHONE', 'I-PHONE']
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 181, in load_data
+    train_data = parse_conll_file(train_path)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 102, in parse_conll_file
+    validate_tags(current_example["tags"])
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 50, in validate_tags
+    raise ValueError(f"Invalid tag '{tag}' found in data. Allowed tags: {label_list}")
+ValueError: Invalid tag 'B-LOC' found in data. Allowed tags: ['O', 'B-PRODUCT', 'I-PRODUCT', 'B-PRICE', 'I-PRICE', 'B-PHONE', 'I-PHONE']
+2025-06-26 01:48:22,382 - __main__ - ERROR - Error during training: Invalid tag 'B-LOC' found in data. Allowed tags: ['O', 'B-PRODUCT', 'I-PRODUCT', 'B-PRICE', 'I-PRICE', 'B-PHONE', 'I-PHONE']
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 314, in train
+    dataset = load_data()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 181, in load_data
+    train_data = parse_conll_file(train_path)
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 102, in parse_conll_file
+    validate_tags(current_example["tags"])
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 50, in validate_tags
+    raise ValueError(f"Invalid tag '{tag}' found in data. Allowed tags: {label_list}")
+ValueError: Invalid tag 'B-LOC' found in data. Allowed tags: ['O', 'B-PRODUCT', 'I-PRODUCT', 'B-PRICE', 'I-PRICE', 'B-PHONE', 'I-PHONE']
+2025-06-26 01:59:22,359 - __main__ - ERROR - Training failed: name 'train' is not defined
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 256, in <module>
+    train()
+NameError: name 'train' is not defined
+2025-06-26 02:04:12,587 - __main__ - INFO - Loading and validating dataset...
+2025-06-26 02:04:13,071 - __main__ - INFO - Parsed data\labeled\train.conll: 2507 examples
+2025-06-26 02:04:13,149 - __main__ - INFO - Parsed data\labeled\val.conll: 627 examples
+2025-06-26 02:04:14,571 - __main__ - INFO - 
+Dataset Statistics:
+2025-06-26 02:04:14,571 - __main__ - INFO - 
+TRAIN SET:
+2025-06-26 02:04:14,571 - __main__ - INFO - Examples: 2507
+2025-06-26 02:04:14,571 - __main__ - INFO - Length - Min: 1, Max: 165, Avg: 55.0
+2025-06-26 02:04:14,571 - __main__ - INFO - Tag Distribution:
+2025-06-26 02:04:14,571 - __main__ - INFO - O: 127210 (92.3%)
+2025-06-26 02:04:14,571 - __main__ - INFO - B-PRODUCT: 977 (0.7%)
+2025-06-26 02:04:14,571 - __main__ - INFO - B-LOC: 2256 (1.6%)
+2025-06-26 02:04:14,571 - __main__ - INFO - I-PRODUCT: 971 (0.7%)
+2025-06-26 02:04:14,571 - __main__ - INFO - B-PRICE: 3734 (2.7%)
+2025-06-26 02:04:14,571 - __main__ - INFO - I-PRICE: 2731 (2.0%)
+2025-06-26 02:04:14,571 - __main__ - INFO - B-PHONE: 0 (0.0%)
+2025-06-26 02:04:14,571 - __main__ - INFO - I-PHONE: 0 (0.0%)
+2025-06-26 02:04:14,571 - __main__ - INFO - 
+VAL SET:
+2025-06-26 02:04:14,571 - __main__ - INFO - Examples: 627
+2025-06-26 02:04:14,571 - __main__ - INFO - Length - Min: 2, Max: 132, Avg: 56.6
+2025-06-26 02:04:14,571 - __main__ - INFO - Tag Distribution:
+2025-06-26 02:04:14,571 - __main__ - INFO - O: 32787 (92.4%)
+2025-06-26 02:04:14,571 - __main__ - INFO - B-PRODUCT: 224 (0.6%)
+2025-06-26 02:04:14,571 - __main__ - INFO - B-LOC: 586 (1.7%)
+2025-06-26 02:04:14,571 - __main__ - INFO - I-PRODUCT: 246 (0.7%)
+2025-06-26 02:04:14,571 - __main__ - INFO - B-PRICE: 967 (2.7%)
+2025-06-26 02:04:14,571 - __main__ - INFO - I-PRICE: 683 (1.9%)
+2025-06-26 02:04:14,571 - __main__ - INFO - B-PHONE: 0 (0.0%)
+2025-06-26 02:04:14,571 - __main__ - INFO - I-PHONE: 0 (0.0%)
+2025-06-26 02:04:14,571 - __main__ - INFO - Loaded 2507 train and 627 val examples
+2025-06-26 02:04:14,587 - __main__ - INFO - Loading tokenizer...
+2025-06-26 02:04:18,009 - __main__ - INFO - Tokenizing dataset...
+2025-06-26 02:04:21,588 - __main__ - INFO - Example of tokenized input:
+2025-06-26 02:04:21,588 - __main__ - INFO - Input IDs length: 128
+2025-06-26 02:04:21,588 - __main__ - INFO - Labels length: 128
+2025-06-26 02:04:21,588 - __main__ - INFO - Loading model...
+2025-06-26 02:04:23,479 - __main__ - ERROR - Error during training: __init__() got an unexpected keyword argument 'evaluation_strategy'
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 382, in train
+    training_args = TrainingArguments(
+TypeError: __init__() got an unexpected keyword argument 'evaluation_strategy'
+2025-06-26 02:04:23,479 - __main__ - ERROR - Training failed: __init__() got an unexpected keyword argument 'evaluation_strategy'
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 450, in <module>
+    train()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 382, in train
+    training_args = TrainingArguments(
+TypeError: __init__() got an unexpected keyword argument 'evaluation_strategy'
+2025-06-26 02:16:25,043 - __main__ - INFO - Loading and validating dataset...
+2025-06-26 02:16:25,433 - __main__ - INFO - Parsed data\labeled\train.conll: 2507 examples
+2025-06-26 02:16:25,496 - __main__ - INFO - Parsed data\labeled\val.conll: 627 examples
+2025-06-26 02:16:26,511 - __main__ - INFO - 
+Dataset Statistics:
+2025-06-26 02:16:26,511 - __main__ - INFO - 
+TRAIN SET:
+2025-06-26 02:16:26,511 - __main__ - INFO - Examples: 2507
+2025-06-26 02:16:26,511 - __main__ - INFO - Length - Min: 1, Max: 165, Avg: 55.0
+2025-06-26 02:16:26,511 - __main__ - INFO - Tag Distribution:
+2025-06-26 02:16:26,511 - __main__ - INFO - O: 127210 (92.3%)
+2025-06-26 02:16:26,511 - __main__ - INFO - B-PRODUCT: 977 (0.7%)
+2025-06-26 02:16:26,511 - __main__ - INFO - B-LOC: 2256 (1.6%)
+2025-06-26 02:16:26,511 - __main__ - INFO - I-PRODUCT: 971 (0.7%)
+2025-06-26 02:16:26,511 - __main__ - INFO - B-PRICE: 3734 (2.7%)
+2025-06-26 02:16:26,511 - __main__ - INFO - I-PRICE: 2731 (2.0%)
+2025-06-26 02:16:26,511 - __main__ - INFO - B-PHONE: 0 (0.0%)
+2025-06-26 02:16:26,511 - __main__ - INFO - I-PHONE: 0 (0.0%)
+2025-06-26 02:16:26,511 - __main__ - INFO - 
+VAL SET:
+2025-06-26 02:16:26,511 - __main__ - INFO - Examples: 627
+2025-06-26 02:16:26,511 - __main__ - INFO - Length - Min: 2, Max: 132, Avg: 56.6
+2025-06-26 02:16:26,511 - __main__ - INFO - Tag Distribution:
+2025-06-26 02:16:26,511 - __main__ - INFO - O: 32787 (92.4%)
+2025-06-26 02:16:26,511 - __main__ - INFO - B-PRODUCT: 224 (0.6%)
+2025-06-26 02:16:26,511 - __main__ - INFO - B-LOC: 586 (1.7%)
+2025-06-26 02:16:26,511 - __main__ - INFO - I-PRODUCT: 246 (0.7%)
+2025-06-26 02:16:26,511 - __main__ - INFO - B-PRICE: 967 (2.7%)
+2025-06-26 02:16:26,511 - __main__ - INFO - I-PRICE: 683 (1.9%)
+2025-06-26 02:16:26,527 - __main__ - INFO - B-PHONE: 0 (0.0%)
+2025-06-26 02:16:26,527 - __main__ - INFO - I-PHONE: 0 (0.0%)
+2025-06-26 02:16:26,527 - __main__ - INFO - Loaded 2507 train and 627 val examples
+2025-06-26 02:16:26,527 - __main__ - INFO - Loading tokenizer...
+2025-06-26 02:16:29,761 - __main__ - INFO - Tokenizing dataset...
+2025-06-26 02:16:33,152 - __main__ - INFO - Example of tokenized input:
+2025-06-26 02:16:33,152 - __main__ - INFO - Input IDs length: 128
+2025-06-26 02:16:33,152 - __main__ - INFO - Labels length: 128
+2025-06-26 02:16:33,152 - __main__ - INFO - Loading model...
+2025-06-26 02:16:33,152 - __main__ - ERROR - Error during training: name 'label_list' is not defined
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 376, in train
+    num_labels=len(label_list),
+NameError: name 'label_list' is not defined
+2025-06-26 02:16:33,152 - __main__ - ERROR - Training failed: name 'label_list' is not defined
+Traceback (most recent call last):
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 450, in <module>
+    train()
+  File "C:\Users\tefer\Desktop\EthioMart-Amharic-NER\src\modeling\train_ner.py", line 376, in train
+    num_labels=len(label_list),
+NameError: name 'label_list' is not defined
+2025-06-26 02:19:42,710 - __main__ - INFO - Loading and validating dataset...
+2025-06-26 02:19:42,976 - __main__ - INFO - Parsed data\labeled\train.conll: 2507 examples
+2025-06-26 02:19:43,038 - __main__ - INFO - Parsed data\labeled\val.conll: 627 examples
+2025-06-26 02:19:44,164 - __main__ - INFO - 
+Dataset Statistics:
+2025-06-26 02:19:44,164 - __main__ - INFO - 
+TRAIN SET:
+2025-06-26 02:19:44,164 - __main__ - INFO - Examples: 2507
+2025-06-26 02:19:44,164 - __main__ - INFO - Length - Min: 1, Max: 165, Avg: 55.0
+2025-06-26 02:19:44,164 - __main__ - INFO - Tag Distribution:
+2025-06-26 02:19:44,164 - __main__ - INFO - O: 127210 (92.3%)
+2025-06-26 02:19:44,164 - __main__ - INFO - B-PRODUCT: 977 (0.7%)
+2025-06-26 02:19:44,164 - __main__ - INFO - B-LOC: 2256 (1.6%)
+2025-06-26 02:19:44,164 - __main__ - INFO - I-PRODUCT: 971 (0.7%)
+2025-06-26 02:19:44,164 - __main__ - INFO - B-PRICE: 3734 (2.7%)
+2025-06-26 02:19:44,164 - __main__ - INFO - I-PRICE: 2731 (2.0%)
+2025-06-26 02:19:44,164 - __main__ - INFO - B-PHONE: 0 (0.0%)
+2025-06-26 02:19:44,164 - __main__ - INFO - I-PHONE: 0 (0.0%)
+2025-06-26 02:19:44,164 - __main__ - INFO - 
+VAL SET:
+2025-06-26 02:19:44,164 - __main__ - INFO - Examples: 627
+2025-06-26 02:19:44,164 - __main__ - INFO - Length - Min: 2, Max: 132, Avg: 56.6
+2025-06-26 02:19:44,164 - __main__ - INFO - Tag Distribution:
+2025-06-26 02:19:44,164 - __main__ - INFO - O: 32787 (92.4%)
+2025-06-26 02:19:44,164 - __main__ - INFO - B-PRODUCT: 224 (0.6%)
+2025-06-26 02:19:44,164 - __main__ - INFO - B-LOC: 586 (1.7%)
+2025-06-26 02:19:44,164 - __main__ - INFO - I-PRODUCT: 246 (0.7%)
+2025-06-26 02:19:44,164 - __main__ - INFO - B-PRICE: 967 (2.7%)
+2025-06-26 02:19:44,164 - __main__ - INFO - I-PRICE: 683 (1.9%)
+2025-06-26 02:19:44,164 - __main__ - INFO - B-PHONE: 0 (0.0%)
+2025-06-26 02:19:44,164 - __main__ - INFO - I-PHONE: 0 (0.0%)
+2025-06-26 02:19:44,164 - __main__ - INFO - Loaded 2507 train and 627 val examples
+2025-06-26 02:19:44,179 - __main__ - INFO - Loading tokenizer...
+2025-06-26 02:19:47,664 - __main__ - INFO - Tokenizing dataset...
+2025-06-26 02:19:51,420 - __main__ - INFO - Example of tokenized input:
+2025-06-26 02:19:51,420 - __main__ - INFO - Input IDs length: 128
+2025-06-26 02:19:51,420 - __main__ - INFO - Labels length: 128
+2025-06-26 02:19:51,420 - __main__ - INFO - Loading model...
+2025-06-26 02:19:54,121 - __main__ - INFO - Starting training...
+2025-06-26 05:31:48,779 - __main__ - INFO - Saving model and artifacts...
+2025-06-26 05:32:00,219 - __main__ - INFO - Evaluating on validation set...
+2025-06-26 05:34:29,268 - __main__ - INFO - Final evaluation results:
+2025-06-26 05:34:29,268 - __main__ - INFO - eval_loss: 0.022296611219644547
+2025-06-26 05:34:29,268 - __main__ - INFO - eval_precision: 0.8800190148342111
+2025-06-26 05:34:29,268 - __main__ - INFO - eval_recall: 0.9339922235875031
+2025-06-26 05:34:29,268 - __main__ - INFO - eval_f1: 0.9045076092140611
+2025-06-26 05:34:29,268 - __main__ - INFO - eval_runtime: 148.8923
+2025-06-26 05:34:29,268 - __main__ - INFO - eval_samples_per_second: 4.211
+2025-06-26 05:34:29,268 - __main__ - INFO - eval_steps_per_second: 0.531
+2025-06-26 05:34:29,268 - __main__ - INFO - epoch: 3.0
+2025-06-26 05:34:29,268 - __main__ - INFO - Training completed successfully

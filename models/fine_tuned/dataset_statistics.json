@@ -1,0 +1,36 @@
+{
+  "train": {
+    "num_examples": 2507,
+    "tag_distribution": {
+      "O": 127210,
+      "B-PRICE": 3734,
+      "I-PRICE": 2731,
+      "B-LOC": 2256,
+      "B-PRODUCT": 977,
+      "I-PRODUCT": 971
+    },
+    "length_stats": {
+      "min": 1,
+      "max": 165,
+      "sum": 137879,
+      "avg": 54.997606701236535
+    }
+  },
+  "val": {
+    "num_examples": 627,
+    "tag_distribution": {
+      "O": 32787,
+      "B-PRICE": 967,
+      "B-LOC": 586,
+      "B-PRODUCT": 224,
+      "I-PRODUCT": 246,
+      "I-PRICE": 683
+    },
+    "length_stats": {
+      "min": 2,
+      "max": 132,
+      "sum": 35493,
+      "avg": 56.60765550239235
+    }
+  }
+}
