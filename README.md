@@ -36,11 +36,6 @@
            D --> E[Token Classifier Head]
            E --> F[Entity Tags]
 
-## 1. Annotation Guidelines
-| Amharic Text      | CoNLL Tag    | Description               |
-|-------------------|-------------|--------------------------|
-| "ስልክ 5000 ብር"    | B-PRODUCT   | First product word        |
-| "5000"            | B-PRICE     | Numeric price value      |
-| "ብር"             | I-PRICE     | Currency unit            |
+
 
 
